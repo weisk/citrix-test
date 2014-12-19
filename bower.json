@@ -1,0 +1,24 @@
+{
+  "name": "citrix-test",
+  "main": "app.js",
+  "version": "0.1.0",
+  "authors": [
+    "Francesc Mallafre <franml87@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.3.x",
+    "angular-route": "~1.3.x",
+    "angular-material": "~0.6.1",
+    "jquery": "~2.1.3",
+    "lodash": "~2.4.1"
+  }
+}
