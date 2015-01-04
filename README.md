@@ -3,6 +3,11 @@ Citrix Puzzle
 
 MultiSelect Component
 
+### Development
+* [Yeoman] - Kickstart/scaffold webapp
+* [Bower] - Manage dependencies
+* [Gulp] - Task runner - compile, build, wire, minify, preview
+
 ### Technology
 
 * [AngularJS] - to separate responsibilities in a MVC fashion
