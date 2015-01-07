@@ -1,4 +1,8 @@
-h3 List of Awesome Things
+h3 Citrix Podio
+input(type="text" ng-model="filter")
 ul
-  li(ng-repeat="thing in awesomeThings").
-    {{ thing }}
+  li.lol(ng-repeat="org in data | filter:canViewOrg")
+    {{org.name}}
+    ul
+      li(ng-repeat="space in org.spaces | filter:canViewSpace")
+        {{space.name}}

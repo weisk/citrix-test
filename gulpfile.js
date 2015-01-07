@@ -8,10 +8,16 @@ var tplCache  = require('gulp-angular-templatecache');
 var jade      = require('gulp-jade');
 var less      = require('gulp-less');
 
+gulp.task('assets', function() {
+  gulp.src([
+    './app/assets/*'
+  ]).pipe(gulp.dest('./build/assets'));
+});
+
 gulp.task('appJS', function() {
   // concatenate compiled .coffee files and js files
   // into build/app.js
-  gulp.src(['!./app/**/*_test.js','./app/**/*.js','!./app/**/*_test.coffee','./app/**/*.coffee'])
+  gulp.src(['!./app/**/*.test.js','./app/**/*.js','!./app/**/*.test.coffee','./app/**/*.coffee'])
     .pipe(gulpif(/[.]coffee$/, coffee({bare: true}).on('error', gutil.log)))
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./build'))
@@ -20,8 +26,8 @@ gulp.task('appJS', function() {
 gulp.task('testJS', function() {
   // Compile JS test files. Not compiled.
   gulp.src([
-      './app/**/*_test.js',
-      './app/**/*_test.coffee'
+      './app/**/*.test.js',
+      './app/**/*.test.coffee'
     ])
     .pipe(
       gulpif(/[.]coffee$/,
@@ -106,8 +112,8 @@ gulp.task('watch',function() {
   });
 
   // watch files to build
-  gulp.watch(['./app/**/*.coffee', '!./app/**/*_test.coffee', './app/**/*.js', '!./app/**/*_test.js'], ['appJS']);
-  gulp.watch(['./app/**/*_test.coffee', './app/**/*_test.js'], ['testJS']);
+  gulp.watch(['./app/**/*.coffee', '!./app/**/*.test.coffee', './app/**/*.js', '!./app/**/*.test.js'], ['appJS']);
+  gulp.watch(['./app/**/*.test.coffee', './app/**/*.test.js'], ['testJS']);
   gulp.watch(['!./app/index.jade', '!./app/index.html', './app/**/*.jade', './app/**/*.html'], ['templates']);
   gulp.watch(['./app/**/*.less', './app/**/*.css'], ['appCSS']);
   gulp.watch(['./app/index.jade', './app/index.html'], ['index']);
@@ -119,4 +125,4 @@ gulp.task('connect', connect.server({
   livereload: true
 }));
 
-gulp.task('default', ['connect', 'appJS', 'testJS', 'templates', 'appCSS', 'index', 'libJS', 'libCSS', 'watch']);
+gulp.task('default', ['connect', 'assets', 'appJS', 'testJS', 'templates', 'appCSS', 'index', 'libJS', 'libCSS', 'watch']);

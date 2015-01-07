@@ -9753,40 +9753,6 @@ md-card {
  * @license MIT
  * v0.6.1
  */
-md-content.md-default-theme {
-  background-color: #ffffff; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-content {
-  display: block;
-  position: relative;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch; }
-  md-content[md-scroll-y] {
-    overflow-y: auto;
-    overflow-x: hidden; }
-  md-content[md-scroll-x] {
-    overflow-x: auto;
-    overflow-y: hidden; }
-  md-content.md-padding {
-    padding: 8px; }
-
-@media (min-width: 600px) {
-  md-content.md-padding {
-    padding: 16px; }
- }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
 md-checkbox.md-default-theme .md-ripple {
   color: #43a047; }
 md-checkbox.md-default-theme.md-checked .md-ripple {
@@ -9881,6 +9847,40 @@ md-checkbox {
        -moz-user-select: text;
         -ms-user-select: text;
             user-select: text; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-content.md-default-theme {
+  background-color: #ffffff; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-content {
+  display: block;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  md-content[md-scroll-y] {
+    overflow-y: auto;
+    overflow-x: hidden; }
+  md-content[md-scroll-x] {
+    overflow-x: auto;
+    overflow-y: hidden; }
+  md-content.md-padding {
+    padding: 8px; }
+
+@media (min-width: 600px) {
+  md-content.md-padding {
+    padding: 16px; }
+ }
 
 /*!
  * Angular Material Design
@@ -11616,6 +11616,68 @@ svg, object {
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
+ * v0.6.1
+ */
+md-list {
+  padding: 8px 0px 8px 0px; }
+
+md-item-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0px 0px 0px 0px; }
+
+/**
+ * The left tile for a list item.
+ */
+.md-tile-left {
+  min-width: 56px;
+  margin-right: -16px; }
+
+/**
+ * The center content tile for a list item.
+ */
+.md-tile-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 16px;
+  text-overflow: ellipsis; }
+  .md-tile-content h3 {
+    margin: 0 0 3px 0;
+    font-weight: 400;
+    font-size: 1.1em; }
+  .md-tile-content h4 {
+    margin: 0 0 3px 0;
+    font-weight: 400;
+    font-size: 0.9em; }
+  .md-tile-content p {
+    margin: 0 0 3px 0;
+    font-size: 0.75em; }
+
+/**
+ * The right tile for a list item.
+ */
+.md-tile-right {
+  padding-right: 0px; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
  * v0.6.0
  */
 
@@ -13089,68 +13151,6 @@ md-progress-circular {
  * @license MIT
  * v0.6.1
  */
-md-list {
-  padding: 8px 0px 8px 0px; }
-
-md-item-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  box-sizing: border-box;
-  position: relative;
-  padding: 0px 0px 0px 0px; }
-
-/**
- * The left tile for a list item.
- */
-.md-tile-left {
-  min-width: 56px;
-  margin-right: -16px; }
-
-/**
- * The center content tile for a list item.
- */
-.md-tile-content {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 16px;
-  text-overflow: ellipsis; }
-  .md-tile-content h3 {
-    margin: 0 0 3px 0;
-    font-weight: 400;
-    font-size: 1.1em; }
-  .md-tile-content h4 {
-    margin: 0 0 3px 0;
-    font-weight: 400;
-    font-size: 0.9em; }
-  .md-tile-content p {
-    margin: 0 0 3px 0;
-    font-size: 0.75em; }
-
-/**
- * The right tile for a list item.
- */
-.md-tile-right {
-  padding-right: 0px; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
 md-progress-linear.md-default-theme .md-container {
   background-color: #b3e5fc; }
 md-progress-linear.md-default-theme .md-bar {
@@ -13536,6 +13536,93 @@ md-progress-linear {
  * @license MIT
  * v0.6.1
  */
+md-radio-button.md-default-theme .md-container .md-ripple, md-switch.md-default-theme .md-switch-thumb .md-container .md-ripple {
+  color: #43a047; }
+md-radio-button.md-default-theme .md-off, md-switch.md-default-theme .md-switch-thumb .md-off {
+  border-color: rgba(0, 0, 0, 0.54); }
+md-radio-button.md-default-theme .md-on, md-switch.md-default-theme .md-switch-thumb .md-on {
+  background-color: rgba(102, 187, 106, 0.87); }
+md-radio-button.md-default-theme.md-checked .md-off, md-switch.md-default-theme .md-switch-thumb.md-checked .md-off {
+  border-color: rgba(102, 187, 106, 0.87); }
+md-radio-button.md-default-theme.md-checked .md-ink-ripple, md-switch.md-default-theme .md-switch-thumb.md-checked .md-ink-ripple {
+  color: rgba(102, 187, 106, 0.87); }
+
+md-radio-group.md-default-theme:focus {
+  border-color: rgba(0, 0, 0, 0.73); }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-radio-button, .md-switch-thumb {
+  display: block;
+  margin: 15px;
+  white-space: nowrap;
+  cursor: pointer; }
+  md-radio-button input, .md-switch-thumb input {
+    display: none; }
+  md-radio-button .md-container, .md-switch-thumb .md-container {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer; }
+    md-radio-button .md-container .md-ripple-container, .md-switch-thumb .md-container .md-ripple-container {
+      position: absolute;
+      display: block;
+      width: 48px;
+      height: 48px;
+      left: -16px;
+      top: -16px; }
+  md-radio-button .md-off, .md-switch-thumb .md-off {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border: solid 2px;
+    border-radius: 50%;
+    -webkit-transition: border-color ease 0.28s;
+            transition: border-color ease 0.28s; }
+  md-radio-button .md-on, .md-switch-thumb .md-on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform ease 0.28s;
+            transition: transform ease 0.28s;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  md-radio-button.md-checked .md-on, .md-switch-thumb.md-checked .md-on {
+    -webkit-transform: scale(0.55);
+            transform: scale(0.55); }
+  md-radio-button .md-label, .md-switch-thumb .md-label {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    white-space: normal;
+    pointer-events: none;
+    width: auto; }
+  md-radio-button .circle, .md-switch-thumb .circle {
+    border-radius: 50%; }
+
+md-radio-group {
+  border: 1px dotted transparent;
+  display: block;
+  outline: none; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
 md-sidenav {
   position: absolute;
   width: 304px;
@@ -13591,6 +13678,257 @@ md-sidenav {
   .md-sidenav-right.md-closed {
     -webkit-transform: translate3d(0%, 0, 0);
             transform: translate3d(0%, 0, 0); }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-slider.md-default-theme .md-track {
+  background-color: rgba(0, 0, 0, 0.26); }
+md-slider.md-default-theme .md-track-fill {
+  background-color: #03a9f4; }
+md-slider.md-default-theme .md-thumb:after {
+  border-color: #03a9f4;
+  background-color: #03a9f4; }
+md-slider.md-default-theme .md-sign {
+  background-color: #03a9f4; }
+  md-slider.md-default-theme .md-sign:after {
+    border-top-color: #03a9f4; }
+md-slider.md-default-theme .md-thumb-text {
+  color: white; }
+md-slider.md-default-theme .md-focus-thumb {
+  background-color: rgba(0, 0, 0, 0.54); }
+md-slider.md-default-theme .md-focus-ring {
+  border-color: rgba(0, 0, 0, 0.12); }
+md-slider.md-default-theme .md-disabled-thumb {
+  border-color: #ffffff; }
+md-slider.md-default-theme.md-min .md-thumb:after {
+  background-color: #ffffff; }
+md-slider.md-default-theme[disabled] .md-thumb:after {
+  border-color: #bdbdbd; }
+md-slider.md-default-theme[disabled]:not(.md-min) .md-thumb:after {
+  background-color: #bdbdbd; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+@-webkit-keyframes sliderFocusThumb {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes sliderFocusThumb {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+md-slider {
+  height: 48px;
+  position: relative;
+  display: block;
+  margin-left: 4px;
+  margin-right: 4px;
+  /**
+   * Track
+   */
+  /**
+   * Slider thumb
+   */
+  /* The sign that's focused in discrete mode */
+  /**
+   * The border/background that comes in when focused in non-discrete mode
+   */
+  /* Don't animate left/right while panning */ }
+  md-slider .md-track-container {
+    width: 100%;
+    position: absolute;
+    top: 23px;
+    height: 2px; }
+  md-slider .md-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%; }
+  md-slider .md-track-fill {
+    -webkit-transition: width 0.05s linear;
+            transition: width 0.05s linear; }
+  md-slider .md-track-ticks {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%; }
+  md-slider .md-thumb-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.1s linear;
+            transition: transform 0.1s linear; }
+  md-slider .md-thumb {
+    z-index: 1;
+    position: absolute;
+    left: -19px;
+    top: 5px;
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transition: all 0.1s linear;
+            transition: all 0.1s linear; }
+    md-slider .md-thumb:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+      border: 3px solid; }
+  md-slider .md-sign {
+    /* Center the children (slider-thumb-text) */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    left: -14px;
+    top: -20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    -webkit-transform: scale(0.4) translate3d(0, 70px, 0);
+            transform: scale(0.4) translate3d(0, 70px, 0);
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    /* The arrow pointing down under the sign */ }
+    md-slider .md-sign:after {
+      position: absolute;
+      content: '';
+      left: 0px;
+      border-radius: 16px;
+      top: 19px;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 16px solid;
+      opacity: 0;
+      -webkit-transform: translate3d(0, -8px, 0);
+              transform: translate3d(0, -8px, 0);
+      -webkit-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out; }
+    md-slider .md-sign .md-thumb-text {
+      z-index: 1;
+      font-size: 12px;
+      font-weight: bold; }
+  md-slider .md-focus-thumb {
+    position: absolute;
+    left: -24px;
+    top: 0px;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    display: none;
+    opacity: 0;
+    background-color: #C0C0C0;
+    -webkit-animation: sliderFocusThumb 0.4s linear;
+            animation: sliderFocusThumb 0.4s linear; }
+  md-slider .md-focus-ring {
+    position: absolute;
+    left: -24px;
+    top: 0px;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    border: 2px solid #D6D6D6;
+    background-color: transparent;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0.2s linear;
+            transition: all 0.2s linear; }
+  md-slider .md-disabled-thumb {
+    position: absolute;
+    left: -22px;
+    top: 2px;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    -webkit-transform: scale(0.35);
+            transform: scale(0.35);
+    border: 6px solid;
+    display: none; }
+  md-slider.md-min .md-thumb:after {
+    background-color: white; }
+  md-slider.md-min .md-sign {
+    opacity: 0; }
+  md-slider:focus {
+    outline: none; }
+  md-slider.panning .md-thumb-container, md-slider.panning .md-track-fill {
+    -webkit-transition: none;
+            transition: none; }
+  md-slider:not([md-discrete]) {
+    /* Hide the sign and ticks in non-discrete mode */ }
+    md-slider:not([md-discrete]) .md-track-ticks, md-slider:not([md-discrete]) .md-sign {
+      display: none; }
+    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {
+      -webkit-transform: scale(0.6);
+              transform: scale(0.6); }
+    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-focus-thumb {
+      display: block; }
+    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring, md-slider:not([md-discrete]):not([disabled]).active .md-focus-ring {
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-thumb {
+      -webkit-transform: scale(0.85);
+              transform: scale(0.85); }
+  md-slider[md-discrete] {
+    /* Hide the focus thumb in discrete mode */ }
+    md-slider[md-discrete] .md-focus-thumb, md-slider[md-discrete] .md-focus-ring {
+      display: none; }
+    md-slider[md-discrete]:not([disabled]):focus .md-sign, md-slider[md-discrete]:not([disabled]):focus .md-sign:after, md-slider[md-discrete]:not([disabled]).active .md-sign, md-slider[md-discrete]:not([disabled]).active .md-sign:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1); }
+  md-slider[disabled] .md-track-fill {
+    display: none; }
+  md-slider[disabled] .md-sign {
+    display: none; }
+  md-slider[disabled] .md-thumb {
+    -webkit-transform: scale(0.35);
+            transform: scale(0.35); }
+  md-slider[disabled] .md-disabled-thumb {
+    display: block; }
 
 /*!
  * Angular Material Design
@@ -13925,31 +14263,29 @@ md-tab {
  * @license MIT
  * v0.6.1
  */
-md-slider.md-default-theme .md-track {
-  background-color: rgba(0, 0, 0, 0.26); }
-md-slider.md-default-theme .md-track-fill {
-  background-color: #03a9f4; }
-md-slider.md-default-theme .md-thumb:after {
-  border-color: #03a9f4;
-  background-color: #03a9f4; }
-md-slider.md-default-theme .md-sign {
-  background-color: #03a9f4; }
-  md-slider.md-default-theme .md-sign:after {
-    border-top-color: #03a9f4; }
-md-slider.md-default-theme .md-thumb-text {
-  color: white; }
-md-slider.md-default-theme .md-focus-thumb {
-  background-color: rgba(0, 0, 0, 0.54); }
-md-slider.md-default-theme .md-focus-ring {
+md-input-group.md-default-theme input, md-input-group.md-default-theme textarea {
+  text-shadow: none; }
+  md-input-group.md-default-theme input:-ms-input-placeholder, md-input-group.md-default-theme textarea:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.26); }
+  md-input-group.md-default-theme input::-webkit-input-placeholder, md-input-group.md-default-theme textarea::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.26); }
+md-input-group.md-default-theme label {
+  text-shadow: none;
+  color: rgba(0, 0, 0, 0.26); }
+md-input-group.md-default-theme input, md-input-group.md-default-theme textarea {
+  color: rgba(0, 0, 0, 0.73);
   border-color: rgba(0, 0, 0, 0.12); }
-md-slider.md-default-theme .md-disabled-thumb {
-  border-color: #ffffff; }
-md-slider.md-default-theme.md-min .md-thumb:after {
-  background-color: #ffffff; }
-md-slider.md-default-theme[disabled] .md-thumb:after {
-  border-color: #bdbdbd; }
-md-slider.md-default-theme[disabled]:not(.md-min) .md-thumb:after {
-  background-color: #bdbdbd; }
+md-input-group.md-default-theme.md-input-focused input, md-input-group.md-default-theme.md-input-focused textarea {
+  border-color: #03a9f4; }
+md-input-group.md-default-theme.md-input-focused label {
+  color: #03a9f4; }
+md-input-group.md-default-theme.md-input-has-value:not(.md-input-focused) label {
+  color: rgba(0, 0, 0, 0.372); }
+md-input-group.md-default-theme[disabled] input, md-input-group.md-default-theme[disabled] textarea {
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.26);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.19) 50%, rgba(0, 0, 0, 0) 0%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.19) 50%, rgba(0, 0, 0, 0) 0%); }
 
 /*!
  * Angular Material Design
@@ -13957,305 +14293,76 @@ md-slider.md-default-theme[disabled]:not(.md-min) .md-thumb:after {
  * @license MIT
  * v0.6.1
  */
-@-webkit-keyframes sliderFocusThumb {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0); }
+md-input-group label, .md-input-group label {
+  display: block;
+  font-size: 0.75em; }
+md-input-group textarea, md-input-group input[type="text"], md-input-group input[type="password"], md-input-group input[type="datetime"], md-input-group input[type="datetime-local"], md-input-group input[type="date"], md-input-group input[type="month"], md-input-group input[type="time"], md-input-group input[type="week"], md-input-group input[type="number"], md-input-group input[type="email"], md-input-group input[type="url"], md-input-group input[type="search"], md-input-group input[type="tel"], md-input-group input[type="color"], .md-input-group textarea, .md-input-group input[type="text"], .md-input-group input[type="password"], .md-input-group input[type="datetime"], .md-input-group input[type="datetime-local"], .md-input-group input[type="date"], .md-input-group input[type="month"], .md-input-group input[type="time"], .md-input-group input[type="week"], .md-input-group input[type="number"], .md-input-group input[type="email"], .md-input-group input[type="url"], .md-input-group input[type="search"], .md-input-group input[type="tel"], .md-input-group input[type="color"] {
+  display: block;
+  border-width: 0 0 1px 0;
+  padding-top: 2px;
+  line-height: 26px;
+  padding-bottom: 1px; }
+  md-input-group textarea:focus, md-input-group input[type="text"]:focus, md-input-group input[type="password"]:focus, md-input-group input[type="datetime"]:focus, md-input-group input[type="datetime-local"]:focus, md-input-group input[type="date"]:focus, md-input-group input[type="month"]:focus, md-input-group input[type="time"]:focus, md-input-group input[type="week"]:focus, md-input-group input[type="number"]:focus, md-input-group input[type="email"]:focus, md-input-group input[type="url"]:focus, md-input-group input[type="search"]:focus, md-input-group input[type="tel"]:focus, md-input-group input[type="color"]:focus, .md-input-group textarea:focus, .md-input-group input[type="text"]:focus, .md-input-group input[type="password"]:focus, .md-input-group input[type="datetime"]:focus, .md-input-group input[type="datetime-local"]:focus, .md-input-group input[type="date"]:focus, .md-input-group input[type="month"]:focus, .md-input-group input[type="time"]:focus, .md-input-group input[type="week"]:focus, .md-input-group input[type="number"]:focus, .md-input-group input[type="email"]:focus, .md-input-group input[type="url"]:focus, .md-input-group input[type="search"]:focus, .md-input-group input[type="tel"]:focus, .md-input-group input[type="color"]:focus {
+    outline: 0; }
+md-input-group input, md-input-group textarea, .md-input-group input, .md-input-group textarea {
+  background: none; }
 
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@keyframes sliderFocusThumb {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-md-slider {
-  height: 48px;
+md-input-group, .md-input-group {
+  padding-bottom: 2px;
+  margin: 10px 0 8px 0;
   position: relative;
-  display: block;
-  margin-left: 4px;
-  margin-right: 4px;
-  /**
-   * Track
-   */
-  /**
-   * Slider thumb
-   */
-  /* The sign that's focused in discrete mode */
-  /**
-   * The border/background that comes in when focused in non-discrete mode
-   */
-  /* Don't animate left/right while panning */ }
-  md-slider .md-track-container {
-    width: 100%;
-    position: absolute;
-    top: 23px;
-    height: 2px; }
-  md-slider .md-track {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%; }
-  md-slider .md-track-fill {
-    -webkit-transition: width 0.05s linear;
-            transition: width 0.05s linear; }
-  md-slider .md-track-ticks {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%; }
-  md-slider .md-thumb-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform 0.1s linear;
-            transition: transform 0.1s linear; }
-  md-slider .md-thumb {
+  display: block; }
+  md-input-group label, .md-input-group label {
+    font-size: 1em;
     z-index: 1;
-    position: absolute;
-    left: -19px;
-    top: 5px;
-    width: 38px;
-    height: 38px;
-    border-radius: 38px;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    -webkit-transition: all 0.1s linear;
-            transition: all 0.1s linear; }
-    md-slider .md-thumb:after {
-      content: '';
-      position: absolute;
-      left: 3px;
-      top: 3px;
-      width: 32px;
-      height: 32px;
-      border-radius: 32px;
-      border: 3px solid; }
-  md-slider .md-sign {
-    /* Center the children (slider-thumb-text) */
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: absolute;
-    left: -14px;
-    top: -20px;
-    width: 28px;
-    height: 28px;
-    border-radius: 28px;
-    -webkit-transform: scale(0.4) translate3d(0, 70px, 0);
-            transform: scale(0.4) translate3d(0, 70px, 0);
-    -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-    /* The arrow pointing down under the sign */ }
-    md-slider .md-sign:after {
-      position: absolute;
-      content: '';
-      left: 0px;
-      border-radius: 16px;
-      top: 19px;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-top: 16px solid;
-      opacity: 0;
-      -webkit-transform: translate3d(0, -8px, 0);
-              transform: translate3d(0, -8px, 0);
-      -webkit-transition: all 0.2s ease-in-out;
-              transition: all 0.2s ease-in-out; }
-    md-slider .md-sign .md-thumb-text {
-      z-index: 1;
-      font-size: 12px;
-      font-weight: bold; }
-  md-slider .md-focus-thumb {
-    position: absolute;
-    left: -24px;
-    top: 0px;
-    width: 48px;
-    height: 48px;
-    border-radius: 48px;
-    display: none;
-    opacity: 0;
-    background-color: #C0C0C0;
-    -webkit-animation: sliderFocusThumb 0.4s linear;
-            animation: sliderFocusThumb 0.4s linear; }
-  md-slider .md-focus-ring {
-    position: absolute;
-    left: -24px;
-    top: 0px;
-    width: 48px;
-    height: 48px;
-    border-radius: 48px;
-    border: 2px solid #D6D6D6;
-    background-color: transparent;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transition: all 0.2s linear;
-            transition: all 0.2s linear; }
-  md-slider .md-disabled-thumb {
-    position: absolute;
-    left: -22px;
-    top: 2px;
-    width: 44px;
-    height: 44px;
-    border-radius: 44px;
-    -webkit-transform: scale(0.35);
-            transform: scale(0.35);
-    border: 6px solid;
-    display: none; }
-  md-slider.md-min .md-thumb:after {
-    background-color: white; }
-  md-slider.md-min .md-sign {
-    opacity: 0; }
-  md-slider:focus {
-    outline: none; }
-  md-slider.panning .md-thumb-container, md-slider.panning .md-track-fill {
-    -webkit-transition: none;
-            transition: none; }
-  md-slider:not([md-discrete]) {
-    /* Hide the sign and ticks in non-discrete mode */ }
-    md-slider:not([md-discrete]) .md-track-ticks, md-slider:not([md-discrete]) .md-sign {
-      display: none; }
-    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {
-      -webkit-transform: scale(0.6);
-              transform: scale(0.6); }
-    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-focus-thumb {
-      display: block; }
-    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring, md-slider:not([md-discrete]):not([disabled]).active .md-focus-ring {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-thumb {
-      -webkit-transform: scale(0.85);
-              transform: scale(0.85); }
-  md-slider[md-discrete] {
-    /* Hide the focus thumb in discrete mode */ }
-    md-slider[md-discrete] .md-focus-thumb, md-slider[md-discrete] .md-focus-ring {
-      display: none; }
-    md-slider[md-discrete]:not([disabled]):focus .md-sign, md-slider[md-discrete]:not([disabled]):focus .md-sign:after, md-slider[md-discrete]:not([disabled]).active .md-sign, md-slider[md-discrete]:not([disabled]).active .md-sign:after {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0) scale(1);
-              transform: translate3d(0, 0, 0) scale(1); }
-  md-slider[disabled] .md-track-fill {
-    display: none; }
-  md-slider[disabled] .md-sign {
-    display: none; }
-  md-slider[disabled] .md-thumb {
-    -webkit-transform: scale(0.35);
-            transform: scale(0.35); }
-  md-slider[disabled] .md-disabled-thumb {
-    display: block; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-radio-button.md-default-theme .md-container .md-ripple, md-switch.md-default-theme .md-switch-thumb .md-container .md-ripple {
-  color: #43a047; }
-md-radio-button.md-default-theme .md-off, md-switch.md-default-theme .md-switch-thumb .md-off {
-  border-color: rgba(0, 0, 0, 0.54); }
-md-radio-button.md-default-theme .md-on, md-switch.md-default-theme .md-switch-thumb .md-on {
-  background-color: rgba(102, 187, 106, 0.87); }
-md-radio-button.md-default-theme.md-checked .md-off, md-switch.md-default-theme .md-switch-thumb.md-checked .md-off {
-  border-color: rgba(102, 187, 106, 0.87); }
-md-radio-button.md-default-theme.md-checked .md-ink-ripple, md-switch.md-default-theme .md-switch-thumb.md-checked .md-ink-ripple {
-  color: rgba(102, 187, 106, 0.87); }
-
-md-radio-group.md-default-theme:focus {
-  border-color: rgba(0, 0, 0, 0.73); }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-radio-button, .md-switch-thumb {
-  display: block;
-  margin: 15px;
-  white-space: nowrap;
-  cursor: pointer; }
-  md-radio-button input, .md-switch-thumb input {
-    display: none; }
-  md-radio-button .md-container, .md-switch-thumb .md-container {
-    position: relative;
-    top: 4px;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    cursor: pointer; }
-    md-radio-button .md-container .md-ripple-container, .md-switch-thumb .md-container .md-ripple-container {
-      position: absolute;
-      display: block;
-      width: 48px;
-      height: 48px;
-      left: -16px;
-      top: -16px; }
-  md-radio-button .md-off, .md-switch-thumb .md-off {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 16px;
-    height: 16px;
-    border: solid 2px;
-    border-radius: 50%;
-    -webkit-transition: border-color ease 0.28s;
-            transition: border-color ease 0.28s; }
-  md-radio-button .md-on, .md-switch-thumb .md-on {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    -webkit-transition: -webkit-transform ease 0.28s;
-            transition: transform ease 0.28s;
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-  md-radio-button.md-checked .md-on, .md-switch-thumb.md-checked .md-on {
-    -webkit-transform: scale(0.55);
-            transform: scale(0.55); }
-  md-radio-button .md-label, .md-switch-thumb .md-label {
-    position: relative;
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: middle;
-    white-space: normal;
     pointer-events: none;
-    width: auto; }
-  md-radio-button .circle, .md-switch-thumb .circle {
-    border-radius: 50%; }
-
-md-radio-group {
-  border: 1px dotted transparent;
-  display: block;
-  outline: none; }
+    -webkit-font-smoothing: antialiased; }
+    md-input-group label:hover, .md-input-group label:hover {
+      cursor: text; }
+  md-input-group label, .md-input-group label {
+    -webkit-transform: translate3d(0, 22px, 0);
+            transform: translate3d(0, 22px, 0);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1); }
+  md-input-group input, md-input-group textarea, .md-input-group input, .md-input-group textarea {
+    border-bottom-width: 1px;
+    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1); }
+  md-input-group.md-input-focused label, .md-input-group.md-input-focused label {
+    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
+            transform: translate3d(0, 4px, 0) scale(0.75); }
+  md-input-group.md-input-focused input, md-input-group.md-input-focused textarea, .md-input-group.md-input-focused input, .md-input-group.md-input-focused textarea {
+    border-bottom-width: 2px; }
+  md-input-group.md-input-focused input, .md-input-group.md-input-focused input {
+    padding-bottom: 0px; }
+  md-input-group.md-input-has-value label, .md-input-group.md-input-has-value label {
+    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
+            transform: translate3d(0, 4px, 0) scale(0.75); }
+  md-input-group.md-input-has-value:not(.md-input-focused) label, .md-input-group.md-input-has-value:not(.md-input-focused) label {
+    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
+            transform: translate3d(0, 4px, 0) scale(0.75); }
+  md-input-group[disabled] input, md-input-group[disabled] textarea, .md-input-group[disabled] input, .md-input-group[disabled] textarea {
+    border-bottom-width: 0px; }
+  md-input-group[disabled] input, md-input-group[disabled] textarea, .md-input-group[disabled] input, .md-input-group[disabled] textarea {
+    background-size: 3px 1px;
+    background-position: 0 bottom;
+    background-size: 2px 1px;
+    background-repeat: repeat-x;
+    pointer-events: none; }
+  md-input-group[disabled] label, .md-input-group[disabled] label {
+    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
+            transform: translate3d(0, 4px, 0) scale(0.75); }
+  md-input-group[disabled] *:not(.md-input-has-value) label, .md-input-group[disabled] *:not(.md-input-has-value) label {
+    -webkit-transform: translate3d(0, 22px, 0);
+            transform: translate3d(0, 22px, 0);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
+            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1); }
 
 /*!
  * Angular Material Design
@@ -14393,29 +14500,11 @@ md-toast {
  * @license MIT
  * v0.6.1
  */
-md-input-group.md-default-theme input, md-input-group.md-default-theme textarea {
-  text-shadow: none; }
-  md-input-group.md-default-theme input:-ms-input-placeholder, md-input-group.md-default-theme textarea:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.26); }
-  md-input-group.md-default-theme input::-webkit-input-placeholder, md-input-group.md-default-theme textarea::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.26); }
-md-input-group.md-default-theme label {
-  text-shadow: none;
-  color: rgba(0, 0, 0, 0.26); }
-md-input-group.md-default-theme input, md-input-group.md-default-theme textarea {
-  color: rgba(0, 0, 0, 0.73);
-  border-color: rgba(0, 0, 0, 0.12); }
-md-input-group.md-default-theme.md-input-focused input, md-input-group.md-default-theme.md-input-focused textarea {
-  border-color: #03a9f4; }
-md-input-group.md-default-theme.md-input-focused label {
-  color: #03a9f4; }
-md-input-group.md-default-theme.md-input-has-value:not(.md-input-focused) label {
-  color: rgba(0, 0, 0, 0.372); }
-md-input-group.md-default-theme[disabled] input, md-input-group.md-default-theme[disabled] textarea {
-  border-bottom-color: rgba(0, 0, 0, 0.12);
-  color: rgba(0, 0, 0, 0.26);
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.19) 50%, rgba(0, 0, 0, 0) 0%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.19) 0%, rgba(0, 0, 0, 0.19) 50%, rgba(0, 0, 0, 0) 0%); }
+md-toolbar.md-default-theme {
+  background-color: #03a9f4;
+  color: white; }
+  md-toolbar.md-default-theme .md-button {
+    color: white; }
 
 /*!
  * Angular Material Design
@@ -14423,76 +14512,68 @@ md-input-group.md-default-theme[disabled] input, md-input-group.md-default-theme
  * @license MIT
  * v0.6.1
  */
-md-input-group label, .md-input-group label {
-  display: block;
-  font-size: 0.75em; }
-md-input-group textarea, md-input-group input[type="text"], md-input-group input[type="password"], md-input-group input[type="datetime"], md-input-group input[type="datetime-local"], md-input-group input[type="date"], md-input-group input[type="month"], md-input-group input[type="time"], md-input-group input[type="week"], md-input-group input[type="number"], md-input-group input[type="email"], md-input-group input[type="url"], md-input-group input[type="search"], md-input-group input[type="tel"], md-input-group input[type="color"], .md-input-group textarea, .md-input-group input[type="text"], .md-input-group input[type="password"], .md-input-group input[type="datetime"], .md-input-group input[type="datetime-local"], .md-input-group input[type="date"], .md-input-group input[type="month"], .md-input-group input[type="time"], .md-input-group input[type="week"], .md-input-group input[type="number"], .md-input-group input[type="email"], .md-input-group input[type="url"], .md-input-group input[type="search"], .md-input-group input[type="tel"], .md-input-group input[type="color"] {
-  display: block;
-  border-width: 0 0 1px 0;
-  padding-top: 2px;
-  line-height: 26px;
-  padding-bottom: 1px; }
-  md-input-group textarea:focus, md-input-group input[type="text"]:focus, md-input-group input[type="password"]:focus, md-input-group input[type="datetime"]:focus, md-input-group input[type="datetime-local"]:focus, md-input-group input[type="date"]:focus, md-input-group input[type="month"]:focus, md-input-group input[type="time"]:focus, md-input-group input[type="week"]:focus, md-input-group input[type="number"]:focus, md-input-group input[type="email"]:focus, md-input-group input[type="url"]:focus, md-input-group input[type="search"]:focus, md-input-group input[type="tel"]:focus, md-input-group input[type="color"]:focus, .md-input-group textarea:focus, .md-input-group input[type="text"]:focus, .md-input-group input[type="password"]:focus, .md-input-group input[type="datetime"]:focus, .md-input-group input[type="datetime-local"]:focus, .md-input-group input[type="date"]:focus, .md-input-group input[type="month"]:focus, .md-input-group input[type="time"]:focus, .md-input-group input[type="week"]:focus, .md-input-group input[type="number"]:focus, .md-input-group input[type="email"]:focus, .md-input-group input[type="url"]:focus, .md-input-group input[type="search"]:focus, .md-input-group input[type="tel"]:focus, .md-input-group input[type="color"]:focus {
-    outline: 0; }
-md-input-group input, md-input-group textarea, .md-input-group input, .md-input-group textarea {
-  background: none; }
-
-md-input-group, .md-input-group {
-  padding-bottom: 2px;
-  margin: 10px 0 8px 0;
+md-toolbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
-  display: block; }
-  md-input-group label, .md-input-group label {
-    font-size: 1em;
-    z-index: 1;
-    pointer-events: none;
-    -webkit-font-smoothing: antialiased; }
-    md-input-group label:hover, .md-input-group label:hover {
-      cursor: text; }
-  md-input-group label, .md-input-group label {
-    -webkit-transform: translate3d(0, 22px, 0);
-            transform: translate3d(0, 22px, 0);
-    -webkit-transform-origin: left center;
-            transform-origin: left center;
-    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
-            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
-    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
-            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1); }
-  md-input-group input, md-input-group textarea, .md-input-group input, .md-input-group textarea {
-    border-bottom-width: 1px;
-    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
-            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1); }
-  md-input-group.md-input-focused label, .md-input-group.md-input-focused label {
-    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
-            transform: translate3d(0, 4px, 0) scale(0.75); }
-  md-input-group.md-input-focused input, md-input-group.md-input-focused textarea, .md-input-group.md-input-focused input, .md-input-group.md-input-focused textarea {
-    border-bottom-width: 2px; }
-  md-input-group.md-input-focused input, .md-input-group.md-input-focused input {
-    padding-bottom: 0px; }
-  md-input-group.md-input-has-value label, .md-input-group.md-input-has-value label {
-    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
-            transform: translate3d(0, 4px, 0) scale(0.75); }
-  md-input-group.md-input-has-value:not(.md-input-focused) label, .md-input-group.md-input-has-value:not(.md-input-focused) label {
-    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
-            transform: translate3d(0, 4px, 0) scale(0.75); }
-  md-input-group[disabled] input, md-input-group[disabled] textarea, .md-input-group[disabled] input, .md-input-group[disabled] textarea {
-    border-bottom-width: 0px; }
-  md-input-group[disabled] input, md-input-group[disabled] textarea, .md-input-group[disabled] input, .md-input-group[disabled] textarea {
-    background-size: 3px 1px;
-    background-position: 0 bottom;
-    background-size: 2px 1px;
-    background-repeat: repeat-x;
-    pointer-events: none; }
-  md-input-group[disabled] label, .md-input-group[disabled] label {
-    -webkit-transform: translate3d(0, 4px, 0) scale(0.75);
-            transform: translate3d(0, 4px, 0) scale(0.75); }
-  md-input-group[disabled] *:not(.md-input-has-value) label, .md-input-group[disabled] *:not(.md-input-has-value) label {
-    -webkit-transform: translate3d(0, 22px, 0);
-            transform: translate3d(0, 22px, 0);
-    -webkit-transform-origin: left center;
-            transform-origin: left center;
-    -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
-            transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1); }
+  z-index: 2;
+  font-size: 1.3em;
+  min-height: 64px;
+  width: 100%; }
+  md-toolbar.md-tall {
+    height: 192px;
+    min-height: 192px;
+    max-height: 192px; }
+  md-toolbar.md-medium-tall {
+    height: 88px;
+    min-height: 88px;
+    max-height: 88px; }
+    md-toolbar.md-medium-tall .md-toolbar-tools {
+      height: 48px;
+      min-height: 48px;
+      max-height: 48px; }
+  md-toolbar .md-indent {
+    margin-left: 64px; }
+
+.md-toolbar-tools {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 64px;
+  min-height: 64px;
+  max-height: 64px;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 0 10px;
+  margin: 0; }
+  .md-toolbar-tools > * {
+    font-size: inherit;
+    margin: 0 8px; }
+  .md-toolbar-tools h2, .md-toolbar-tools h3 {
+    font-weight: normal; }
+  .md-toolbar-tools a {
+    color: inherit;
+    text-decoration: none; }
+  .md-toolbar-tools .md-button {
+    font-size: 14px; }
 
 /*!
  * Angular Material Design
@@ -14662,87 +14743,6 @@ md-tooltip {
 
 .md-whiteframe-z5 {
   box-shadow: 0px 27px 24px 0 rgba(0, 0, 0, 0.2); }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-toolbar.md-default-theme {
-  background-color: #03a9f4;
-  color: white; }
-  md-toolbar.md-default-theme .md-button {
-    color: white; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-toolbar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  z-index: 2;
-  font-size: 1.3em;
-  min-height: 64px;
-  width: 100%; }
-  md-toolbar.md-tall {
-    height: 192px;
-    min-height: 192px;
-    max-height: 192px; }
-  md-toolbar.md-medium-tall {
-    height: 88px;
-    min-height: 88px;
-    max-height: 88px; }
-    md-toolbar.md-medium-tall .md-toolbar-tools {
-      height: 48px;
-      min-height: 48px;
-      max-height: 48px; }
-  md-toolbar .md-indent {
-    margin-left: 64px; }
-
-.md-toolbar-tools {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: 64px;
-  min-height: 64px;
-  max-height: 64px;
-  font-size: inherit;
-  font-weight: normal;
-  padding: 0 10px;
-  margin: 0; }
-  .md-toolbar-tools > * {
-    font-size: inherit;
-    margin: 0 8px; }
-  .md-toolbar-tools h2, .md-toolbar-tools h3 {
-    font-weight: normal; }
-  .md-toolbar-tools a {
-    color: inherit;
-    text-decoration: none; }
-  .md-toolbar-tools .md-button {
-    font-size: 14px; }
 
 /*!
  * Angular Material Design
@@ -15020,33 +15020,6 @@ md-bottom-sheet {
  * @license MIT
  * v0.6.1
  */
-md-card.md-default-theme {
-  border-radius: 2px; }
-  md-card.md-default-theme .md-card-image {
-    border-radius: 2px 2px 0 0; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-card {
-  display: block;
-  box-sizing: border-box;
-  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
-  margin: 8px;
-  padding: 8px; }
-  md-card .md-card-image {
-    display: block;
-    width: 100%; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
 .md-button.md-default-theme {
   border-radius: 3px; }
   .md-button.md-default-theme:not([disabled]):hover, .md-button.md-default-theme:not([disabled]):focus {
@@ -15211,6 +15184,168 @@ md-card {
   .md-button-group > .md-button:last-child {
     border-right-width: 1px;
     border-radius: 0px 2px 2px 0px; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-card.md-default-theme {
+  border-radius: 2px; }
+  md-card.md-default-theme .md-card-image {
+    border-radius: 2px 2px 0 0; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-card {
+  display: block;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
+  margin: 8px;
+  padding: 8px; }
+  md-card .md-card-image {
+    display: block;
+    width: 100%; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-checkbox.md-default-theme .md-ripple {
+  color: #43a047; }
+md-checkbox.md-default-theme.md-checked .md-ripple {
+  color: #757575; }
+md-checkbox.md-default-theme .md-icon {
+  border-color: rgba(0, 0, 0, 0.54); }
+md-checkbox.md-default-theme.md-checked .md-icon {
+  background-color: rgba(102, 187, 106, 0.87); }
+md-checkbox.md-default-theme.md-checked .md-icon:after {
+  border-color: #eeeeee; }
+md-checkbox.md-default-theme[disabled] .md-icon {
+  border-color: rgba(0, 0, 0, 0.26); }
+md-checkbox.md-default-theme[disabled].md-checked .md-icon {
+  background-color: rgba(0, 0, 0, 0.26); }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-checkbox {
+  display: block;
+  margin: 15px;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  md-checkbox .md-container {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    width: 18px;
+    height: 18px; }
+    md-checkbox .md-container:after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      bottom: -10px;
+      left: -10px; }
+    md-checkbox .md-container .md-ripple-container {
+      position: absolute;
+      display: block;
+      width: auto;
+      height: auto;
+      left: -15px;
+      top: -15px;
+      right: -15px;
+      bottom: -15px; }
+  md-checkbox .md-icon {
+    -webkit-transition: 240ms;
+            transition: 240ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid;
+    border-radius: 2px; }
+  md-checkbox.md-checked .md-icon {
+    border: none; }
+  md-checkbox[disabled] {
+    cursor: no-drop; }
+  md-checkbox:focus .md-label {
+    border-color: black; }
+  md-checkbox.md-checked .md-icon:after {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    display: table;
+    width: 6px;
+    height: 12px;
+    border: 2px solid;
+    border-top: 0;
+    border-left: 0;
+    content: ' '; }
+  md-checkbox .md-label {
+    border: 1px dotted transparent;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    white-space: normal;
+    pointer-events: none;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-content.md-default-theme {
+  background-color: #ffffff; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-content {
+  display: block;
+  position: relative;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+  md-content[md-scroll-y] {
+    overflow-y: auto;
+    overflow-x: hidden; }
+  md-content[md-scroll-x] {
+    overflow-x: auto;
+    overflow-y: hidden; }
+  md-content.md-padding {
+    padding: 8px; }
+
+@media (min-width: 600px) {
+  md-content.md-padding {
+    padding: 16px; }
+ }
 
 /*!
  * Angular Material Design
@@ -16806,40 +16941,6 @@ md-tab > .md-ripple-container .md-ripple {
  * @license MIT
  * v0.6.1
  */
-md-content.md-default-theme {
-  background-color: #ffffff; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-content {
-  display: block;
-  position: relative;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch; }
-  md-content[md-scroll-y] {
-    overflow-y: auto;
-    overflow-x: hidden; }
-  md-content[md-scroll-x] {
-    overflow-x: auto;
-    overflow-y: hidden; }
-  md-content.md-padding {
-    padding: 8px; }
-
-@media (min-width: 600px) {
-  md-content.md-padding {
-    padding: 16px; }
- }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
 md-dialog.md-default-theme {
   border-radius: 4px;
   background-color: #ffffff; }
@@ -16941,107 +17042,6 @@ md-dialog {
  * @license MIT
  * v0.6.1
  */
-md-checkbox.md-default-theme .md-ripple {
-  color: #43a047; }
-md-checkbox.md-default-theme.md-checked .md-ripple {
-  color: #757575; }
-md-checkbox.md-default-theme .md-icon {
-  border-color: rgba(0, 0, 0, 0.54); }
-md-checkbox.md-default-theme.md-checked .md-icon {
-  background-color: rgba(102, 187, 106, 0.87); }
-md-checkbox.md-default-theme.md-checked .md-icon:after {
-  border-color: #eeeeee; }
-md-checkbox.md-default-theme[disabled] .md-icon {
-  border-color: rgba(0, 0, 0, 0.26); }
-md-checkbox.md-default-theme[disabled].md-checked .md-icon {
-  background-color: rgba(0, 0, 0, 0.26); }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-checkbox {
-  display: block;
-  margin: 15px;
-  white-space: nowrap;
-  cursor: pointer;
-  outline: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-  md-checkbox .md-container {
-    position: relative;
-    top: 4px;
-    display: inline-block;
-    width: 18px;
-    height: 18px; }
-    md-checkbox .md-container:after {
-      content: '';
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      bottom: -10px;
-      left: -10px; }
-    md-checkbox .md-container .md-ripple-container {
-      position: absolute;
-      display: block;
-      width: auto;
-      height: auto;
-      left: -15px;
-      top: -15px;
-      right: -15px;
-      bottom: -15px; }
-  md-checkbox .md-icon {
-    -webkit-transition: 240ms;
-            transition: 240ms;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 18px;
-    height: 18px;
-    border: 2px solid;
-    border-radius: 2px; }
-  md-checkbox.md-checked .md-icon {
-    border: none; }
-  md-checkbox[disabled] {
-    cursor: no-drop; }
-  md-checkbox:focus .md-label {
-    border-color: black; }
-  md-checkbox.md-checked .md-icon:after {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    position: absolute;
-    left: 6px;
-    top: 2px;
-    display: table;
-    width: 6px;
-    height: 12px;
-    border: 2px solid;
-    border-top: 0;
-    border-left: 0;
-    content: ' '; }
-  md-checkbox .md-label {
-    border: 1px dotted transparent;
-    position: relative;
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: middle;
-    white-space: normal;
-    pointer-events: none;
-    -webkit-user-select: text;
-       -moz-user-select: text;
-        -ms-user-select: text;
-            user-select: text; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
 md-divider.md-default-theme {
   border-top-color: rgba(0, 0, 0, 0.12); }
 
@@ -17076,13 +17076,6 @@ svg, object {
   fill: currentColor;
   color: currentColor; }
 
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.0
- */
 
 /*!
  * Angular Material Design
@@ -17150,745 +17143,8 @@ md-item-content {
  * Angular Material Design
  * https://github.com/angular/material
  * @license MIT
- * v0.6.1
+ * v0.6.0
  */
-md-progress-linear.md-default-theme .md-container {
-  background-color: #b3e5fc; }
-md-progress-linear.md-default-theme .md-bar {
-  background-color: #03a9f4; }
-md-progress-linear.md-default-theme[md-mode=buffer] .md-dashed:before {
-  background: -webkit-radial-gradient(#b3e5fc 0%, #b3e5fc 16%, transparent 42%);
-  background: radial-gradient(#b3e5fc 0%, #b3e5fc 16%, transparent 42%); }
-md-progress-linear.md-default-theme[md-mode=buffer] .md-bar1 {
-  background-color: #b3e5fc; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-progress-linear {
-  display: block;
-  width: 100%;
-  height: 5px; }
-  md-progress-linear .md-container {
-    overflow: hidden;
-    position: relative;
-    height: 5px;
-    top: 5px;
-    -webkit-transform: translate(0, 5px) scale(1, 0);
-            transform: translate(0, 5px) scale(1, 0);
-    -webkit-transition: all 0.3s linear;
-            transition: all 0.3s linear; }
-  md-progress-linear .md-container.md-ready {
-    -webkit-transform: translate(0, 0) scale(1, 1);
-            transform: translate(0, 0) scale(1, 1); }
-  md-progress-linear .md-bar {
-    height: 5px;
-    position: absolute;
-    width: 100%; }
-  md-progress-linear .md-bar1, md-progress-linear .md-bar2 {
-    -webkit-transition: all 0.2s linear;
-            transition: all 0.2s linear; }
-  md-progress-linear[md-mode=determinate] .md-bar1 {
-    display: none; }
-  md-progress-linear[md-mode=indeterminate] .md-bar1 {
-    -webkit-animation: indeterminate1 4s infinite linear;
-            animation: indeterminate1 4s infinite linear; }
-  md-progress-linear[md-mode=indeterminate] .md-bar2 {
-    -webkit-animation: indeterminate2 4s infinite linear;
-            animation: indeterminate2 4s infinite linear; }
-  md-progress-linear[md-mode=buffer] .md-container {
-    background-color: transparent !important; }
-  md-progress-linear[md-mode=buffer] .md-dashed:before {
-    content: "";
-    display: block;
-    height: 5px;
-    width: 100%;
-    margin-top: 0px;
-    position: absolute;
-    background-color: transparent;
-    background-size: 10px 10px !important;
-    background-position: 0px -23px;
-    -webkit-animation: buffer 3s infinite linear;
-            animation: buffer 3s infinite linear; }
-  md-progress-linear[md-mode=query] .md-bar2 {
-    -webkit-animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
-            animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1); }
-
-@-webkit-keyframes indeterminate1 {
-  0% {
-    -webkit-transform: translateX(-25%) scale(0.5, 1);
-            transform: translateX(-25%) scale(0.5, 1); }
-
-  10% {
-    -webkit-transform: translateX(25%) scale(0.5, 1);
-            transform: translateX(25%) scale(0.5, 1); }
-
-  19.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  20% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  30% {
-    -webkit-transform: translateX(37.5%) scale(0.25, 1);
-            transform: translateX(37.5%) scale(0.25, 1); }
-
-  34.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  36.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  37% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  47% {
-    -webkit-transform: translateX(20%) scale(0.25, 1);
-            transform: translateX(20%) scale(0.25, 1); }
-
-  52% {
-    -webkit-transform: translateX(35%) scale(0.05, 1);
-            transform: translateX(35%) scale(0.05, 1); }
-
-  55% {
-    -webkit-transform: translateX(35%) scale(0.1, 1);
-            transform: translateX(35%) scale(0.1, 1); }
-
-  58% {
-    -webkit-transform: translateX(50%) scale(0.1, 1);
-            transform: translateX(50%) scale(0.1, 1); }
-
-  61.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  69.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  70% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  80% {
-    -webkit-transform: translateX(20%) scale(0.25, 1);
-            transform: translateX(20%) scale(0.25, 1); }
-
-  85% {
-    -webkit-transform: translateX(35%) scale(0.05, 1);
-            transform: translateX(35%) scale(0.05, 1); }
-
-  88% {
-    -webkit-transform: translateX(35%) scale(0.1, 1);
-            transform: translateX(35%) scale(0.1, 1); }
-
-  91% {
-    -webkit-transform: translateX(50%) scale(0.1, 1);
-            transform: translateX(50%) scale(0.1, 1); }
-
-  92.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  93% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  100% {
-    -webkit-transform: translateX(-25%) scale(0.5, 1);
-            transform: translateX(-25%) scale(0.5, 1); } }
-
-@keyframes indeterminate1 {
-  0% {
-    -webkit-transform: translateX(-25%) scale(0.5, 1);
-            transform: translateX(-25%) scale(0.5, 1); }
-
-  10% {
-    -webkit-transform: translateX(25%) scale(0.5, 1);
-            transform: translateX(25%) scale(0.5, 1); }
-
-  19.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  20% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  30% {
-    -webkit-transform: translateX(37.5%) scale(0.25, 1);
-            transform: translateX(37.5%) scale(0.25, 1); }
-
-  34.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  36.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  37% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  47% {
-    -webkit-transform: translateX(20%) scale(0.25, 1);
-            transform: translateX(20%) scale(0.25, 1); }
-
-  52% {
-    -webkit-transform: translateX(35%) scale(0.05, 1);
-            transform: translateX(35%) scale(0.05, 1); }
-
-  55% {
-    -webkit-transform: translateX(35%) scale(0.1, 1);
-            transform: translateX(35%) scale(0.1, 1); }
-
-  58% {
-    -webkit-transform: translateX(50%) scale(0.1, 1);
-            transform: translateX(50%) scale(0.1, 1); }
-
-  61.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  69.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  70% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  80% {
-    -webkit-transform: translateX(20%) scale(0.25, 1);
-            transform: translateX(20%) scale(0.25, 1); }
-
-  85% {
-    -webkit-transform: translateX(35%) scale(0.05, 1);
-            transform: translateX(35%) scale(0.05, 1); }
-
-  88% {
-    -webkit-transform: translateX(35%) scale(0.1, 1);
-            transform: translateX(35%) scale(0.1, 1); }
-
-  91% {
-    -webkit-transform: translateX(50%) scale(0.1, 1);
-            transform: translateX(50%) scale(0.1, 1); }
-
-  92.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  93% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  100% {
-    -webkit-transform: translateX(-25%) scale(0.5, 1);
-            transform: translateX(-25%) scale(0.5, 1); } }
-
-@-webkit-keyframes indeterminate2 {
-  0% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  25.99% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  28% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  38% {
-    -webkit-transform: translateX(37.5%) scale(0.25, 1);
-            transform: translateX(37.5%) scale(0.25, 1); }
-
-  42.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  46.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  49.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  50% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  60% {
-    -webkit-transform: translateX(-25%) scale(0.5, 1);
-            transform: translateX(-25%) scale(0.5, 1); }
-
-  70% {
-    -webkit-transform: translateX(25%) scale(0.5, 1);
-            transform: translateX(25%) scale(0.5, 1); }
-
-  79.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); } }
-
-@keyframes indeterminate2 {
-  0% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  25.99% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  28% {
-    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
-            transform: translateX(-37.5%) scale(0.25, 1); }
-
-  38% {
-    -webkit-transform: translateX(37.5%) scale(0.25, 1);
-            transform: translateX(37.5%) scale(0.25, 1); }
-
-  42.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  46.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  49.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); }
-
-  50% {
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); }
-
-  60% {
-    -webkit-transform: translateX(-25%) scale(0.5, 1);
-            transform: translateX(-25%) scale(0.5, 1); }
-
-  70% {
-    -webkit-transform: translateX(25%) scale(0.5, 1);
-            transform: translateX(25%) scale(0.5, 1); }
-
-  79.99% {
-    -webkit-transform: translateX(50%) scale(0, 1);
-            transform: translateX(50%) scale(0, 1); } }
-
-@-webkit-keyframes query {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateX(35%) scale(0.3, 1);
-            transform: translateX(35%) scale(0.3, 1); }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); } }
-
-@keyframes query {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateX(35%) scale(0.3, 1);
-            transform: translateX(35%) scale(0.3, 1); }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(-50%) scale(0, 1);
-            transform: translateX(-50%) scale(0, 1); } }
-
-@-webkit-keyframes buffer {
-  0% {
-    opacity: 1;
-    background-position: 0px -23px; }
-
-  50% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1;
-    background-position: -200px -23px; } }
-
-@keyframes buffer {
-  0% {
-    opacity: 1;
-    background-position: 0px -23px; }
-
-  50% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1;
-    background-position: -200px -23px; } }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-radio-button.md-default-theme .md-container .md-ripple, md-switch.md-default-theme .md-switch-thumb .md-container .md-ripple {
-  color: #43a047; }
-md-radio-button.md-default-theme .md-off, md-switch.md-default-theme .md-switch-thumb .md-off {
-  border-color: rgba(0, 0, 0, 0.54); }
-md-radio-button.md-default-theme .md-on, md-switch.md-default-theme .md-switch-thumb .md-on {
-  background-color: rgba(102, 187, 106, 0.87); }
-md-radio-button.md-default-theme.md-checked .md-off, md-switch.md-default-theme .md-switch-thumb.md-checked .md-off {
-  border-color: rgba(102, 187, 106, 0.87); }
-md-radio-button.md-default-theme.md-checked .md-ink-ripple, md-switch.md-default-theme .md-switch-thumb.md-checked .md-ink-ripple {
-  color: rgba(102, 187, 106, 0.87); }
-
-md-radio-group.md-default-theme:focus {
-  border-color: rgba(0, 0, 0, 0.73); }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-radio-button, .md-switch-thumb {
-  display: block;
-  margin: 15px;
-  white-space: nowrap;
-  cursor: pointer; }
-  md-radio-button input, .md-switch-thumb input {
-    display: none; }
-  md-radio-button .md-container, .md-switch-thumb .md-container {
-    position: relative;
-    top: 4px;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    cursor: pointer; }
-    md-radio-button .md-container .md-ripple-container, .md-switch-thumb .md-container .md-ripple-container {
-      position: absolute;
-      display: block;
-      width: 48px;
-      height: 48px;
-      left: -16px;
-      top: -16px; }
-  md-radio-button .md-off, .md-switch-thumb .md-off {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 16px;
-    height: 16px;
-    border: solid 2px;
-    border-radius: 50%;
-    -webkit-transition: border-color ease 0.28s;
-            transition: border-color ease 0.28s; }
-  md-radio-button .md-on, .md-switch-thumb .md-on {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    -webkit-transition: -webkit-transform ease 0.28s;
-            transition: transform ease 0.28s;
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-  md-radio-button.md-checked .md-on, .md-switch-thumb.md-checked .md-on {
-    -webkit-transform: scale(0.55);
-            transform: scale(0.55); }
-  md-radio-button .md-label, .md-switch-thumb .md-label {
-    position: relative;
-    display: inline-block;
-    margin-left: 10px;
-    vertical-align: middle;
-    white-space: normal;
-    pointer-events: none;
-    width: auto; }
-  md-radio-button .circle, .md-switch-thumb .circle {
-    border-radius: 50%; }
-
-md-radio-group {
-  border: 1px dotted transparent;
-  display: block;
-  outline: none; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-slider.md-default-theme .md-track {
-  background-color: rgba(0, 0, 0, 0.26); }
-md-slider.md-default-theme .md-track-fill {
-  background-color: #03a9f4; }
-md-slider.md-default-theme .md-thumb:after {
-  border-color: #03a9f4;
-  background-color: #03a9f4; }
-md-slider.md-default-theme .md-sign {
-  background-color: #03a9f4; }
-  md-slider.md-default-theme .md-sign:after {
-    border-top-color: #03a9f4; }
-md-slider.md-default-theme .md-thumb-text {
-  color: white; }
-md-slider.md-default-theme .md-focus-thumb {
-  background-color: rgba(0, 0, 0, 0.54); }
-md-slider.md-default-theme .md-focus-ring {
-  border-color: rgba(0, 0, 0, 0.12); }
-md-slider.md-default-theme .md-disabled-thumb {
-  border-color: #ffffff; }
-md-slider.md-default-theme.md-min .md-thumb:after {
-  background-color: #ffffff; }
-md-slider.md-default-theme[disabled] .md-thumb:after {
-  border-color: #bdbdbd; }
-md-slider.md-default-theme[disabled]:not(.md-min) .md-thumb:after {
-  background-color: #bdbdbd; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-@-webkit-keyframes sliderFocusThumb {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-@keyframes sliderFocusThumb {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0); }
-
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1; }
-
-  100% {
-    opacity: 0; } }
-
-md-slider {
-  height: 48px;
-  position: relative;
-  display: block;
-  margin-left: 4px;
-  margin-right: 4px;
-  /**
-   * Track
-   */
-  /**
-   * Slider thumb
-   */
-  /* The sign that's focused in discrete mode */
-  /**
-   * The border/background that comes in when focused in non-discrete mode
-   */
-  /* Don't animate left/right while panning */ }
-  md-slider .md-track-container {
-    width: 100%;
-    position: absolute;
-    top: 23px;
-    height: 2px; }
-  md-slider .md-track {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%; }
-  md-slider .md-track-fill {
-    -webkit-transition: width 0.05s linear;
-            transition: width 0.05s linear; }
-  md-slider .md-track-ticks {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%; }
-  md-slider .md-thumb-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-    -webkit-transition: -webkit-transform 0.1s linear;
-            transition: transform 0.1s linear; }
-  md-slider .md-thumb {
-    z-index: 1;
-    position: absolute;
-    left: -19px;
-    top: 5px;
-    width: 38px;
-    height: 38px;
-    border-radius: 38px;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    -webkit-transition: all 0.1s linear;
-            transition: all 0.1s linear; }
-    md-slider .md-thumb:after {
-      content: '';
-      position: absolute;
-      left: 3px;
-      top: 3px;
-      width: 32px;
-      height: 32px;
-      border-radius: 32px;
-      border: 3px solid; }
-  md-slider .md-sign {
-    /* Center the children (slider-thumb-text) */
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: absolute;
-    left: -14px;
-    top: -20px;
-    width: 28px;
-    height: 28px;
-    border-radius: 28px;
-    -webkit-transform: scale(0.4) translate3d(0, 70px, 0);
-            transform: scale(0.4) translate3d(0, 70px, 0);
-    -webkit-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out;
-    /* The arrow pointing down under the sign */ }
-    md-slider .md-sign:after {
-      position: absolute;
-      content: '';
-      left: 0px;
-      border-radius: 16px;
-      top: 19px;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-top: 16px solid;
-      opacity: 0;
-      -webkit-transform: translate3d(0, -8px, 0);
-              transform: translate3d(0, -8px, 0);
-      -webkit-transition: all 0.2s ease-in-out;
-              transition: all 0.2s ease-in-out; }
-    md-slider .md-sign .md-thumb-text {
-      z-index: 1;
-      font-size: 12px;
-      font-weight: bold; }
-  md-slider .md-focus-thumb {
-    position: absolute;
-    left: -24px;
-    top: 0px;
-    width: 48px;
-    height: 48px;
-    border-radius: 48px;
-    display: none;
-    opacity: 0;
-    background-color: #C0C0C0;
-    -webkit-animation: sliderFocusThumb 0.4s linear;
-            animation: sliderFocusThumb 0.4s linear; }
-  md-slider .md-focus-ring {
-    position: absolute;
-    left: -24px;
-    top: 0px;
-    width: 48px;
-    height: 48px;
-    border-radius: 48px;
-    border: 2px solid #D6D6D6;
-    background-color: transparent;
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    -webkit-transition: all 0.2s linear;
-            transition: all 0.2s linear; }
-  md-slider .md-disabled-thumb {
-    position: absolute;
-    left: -22px;
-    top: 2px;
-    width: 44px;
-    height: 44px;
-    border-radius: 44px;
-    -webkit-transform: scale(0.35);
-            transform: scale(0.35);
-    border: 6px solid;
-    display: none; }
-  md-slider.md-min .md-thumb:after {
-    background-color: white; }
-  md-slider.md-min .md-sign {
-    opacity: 0; }
-  md-slider:focus {
-    outline: none; }
-  md-slider.panning .md-thumb-container, md-slider.panning .md-track-fill {
-    -webkit-transition: none;
-            transition: none; }
-  md-slider:not([md-discrete]) {
-    /* Hide the sign and ticks in non-discrete mode */ }
-    md-slider:not([md-discrete]) .md-track-ticks, md-slider:not([md-discrete]) .md-sign {
-      display: none; }
-    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {
-      -webkit-transform: scale(0.6);
-              transform: scale(0.6); }
-    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-focus-thumb {
-      display: block; }
-    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring, md-slider:not([md-discrete]):not([disabled]).active .md-focus-ring {
-      -webkit-transform: scale(1);
-              transform: scale(1); }
-    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-thumb {
-      -webkit-transform: scale(0.85);
-              transform: scale(0.85); }
-  md-slider[md-discrete] {
-    /* Hide the focus thumb in discrete mode */ }
-    md-slider[md-discrete] .md-focus-thumb, md-slider[md-discrete] .md-focus-ring {
-      display: none; }
-    md-slider[md-discrete]:not([disabled]):focus .md-sign, md-slider[md-discrete]:not([disabled]):focus .md-sign:after, md-slider[md-discrete]:not([disabled]).active .md-sign, md-slider[md-discrete]:not([disabled]).active .md-sign:after {
-      opacity: 1;
-      -webkit-transform: translate3d(0, 0, 0) scale(1);
-              transform: translate3d(0, 0, 0) scale(1); }
-  md-slider[disabled] .md-track-fill {
-    display: none; }
-  md-slider[disabled] .md-sign {
-    display: none; }
-  md-slider[disabled] .md-thumb {
-    -webkit-transform: scale(0.35);
-            transform: scale(0.35); }
-  md-slider[disabled] .md-disabled-thumb {
-    display: block; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-.md-sticky-clone {
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: absolute !important;
-  -webkit-transform: translate3d(-9999px, -9999px, 0);
-          transform: translate3d(-9999px, -9999px, 0); }
-  .md-sticky-clone[sticky-state="active"] {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
-    .md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect):after {
-      -webkit-animation: subheaderStickyHoverIn 0.3s ease-out both;
-              animation: subheaderStickyHoverIn 0.3s ease-out both; }
 
 /*!
  * Angular Material Design
@@ -19360,6 +18616,812 @@ md-progress-circular {
  * @license MIT
  * v0.6.1
  */
+md-progress-linear.md-default-theme .md-container {
+  background-color: #b3e5fc; }
+md-progress-linear.md-default-theme .md-bar {
+  background-color: #03a9f4; }
+md-progress-linear.md-default-theme[md-mode=buffer] .md-dashed:before {
+  background: -webkit-radial-gradient(#b3e5fc 0%, #b3e5fc 16%, transparent 42%);
+  background: radial-gradient(#b3e5fc 0%, #b3e5fc 16%, transparent 42%); }
+md-progress-linear.md-default-theme[md-mode=buffer] .md-bar1 {
+  background-color: #b3e5fc; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-progress-linear {
+  display: block;
+  width: 100%;
+  height: 5px; }
+  md-progress-linear .md-container {
+    overflow: hidden;
+    position: relative;
+    height: 5px;
+    top: 5px;
+    -webkit-transform: translate(0, 5px) scale(1, 0);
+            transform: translate(0, 5px) scale(1, 0);
+    -webkit-transition: all 0.3s linear;
+            transition: all 0.3s linear; }
+  md-progress-linear .md-container.md-ready {
+    -webkit-transform: translate(0, 0) scale(1, 1);
+            transform: translate(0, 0) scale(1, 1); }
+  md-progress-linear .md-bar {
+    height: 5px;
+    position: absolute;
+    width: 100%; }
+  md-progress-linear .md-bar1, md-progress-linear .md-bar2 {
+    -webkit-transition: all 0.2s linear;
+            transition: all 0.2s linear; }
+  md-progress-linear[md-mode=determinate] .md-bar1 {
+    display: none; }
+  md-progress-linear[md-mode=indeterminate] .md-bar1 {
+    -webkit-animation: indeterminate1 4s infinite linear;
+            animation: indeterminate1 4s infinite linear; }
+  md-progress-linear[md-mode=indeterminate] .md-bar2 {
+    -webkit-animation: indeterminate2 4s infinite linear;
+            animation: indeterminate2 4s infinite linear; }
+  md-progress-linear[md-mode=buffer] .md-container {
+    background-color: transparent !important; }
+  md-progress-linear[md-mode=buffer] .md-dashed:before {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+    margin-top: 0px;
+    position: absolute;
+    background-color: transparent;
+    background-size: 10px 10px !important;
+    background-position: 0px -23px;
+    -webkit-animation: buffer 3s infinite linear;
+            animation: buffer 3s infinite linear; }
+  md-progress-linear[md-mode=query] .md-bar2 {
+    -webkit-animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+            animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1); }
+
+@-webkit-keyframes indeterminate1 {
+  0% {
+    -webkit-transform: translateX(-25%) scale(0.5, 1);
+            transform: translateX(-25%) scale(0.5, 1); }
+
+  10% {
+    -webkit-transform: translateX(25%) scale(0.5, 1);
+            transform: translateX(25%) scale(0.5, 1); }
+
+  19.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  20% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  30% {
+    -webkit-transform: translateX(37.5%) scale(0.25, 1);
+            transform: translateX(37.5%) scale(0.25, 1); }
+
+  34.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  36.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  37% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  47% {
+    -webkit-transform: translateX(20%) scale(0.25, 1);
+            transform: translateX(20%) scale(0.25, 1); }
+
+  52% {
+    -webkit-transform: translateX(35%) scale(0.05, 1);
+            transform: translateX(35%) scale(0.05, 1); }
+
+  55% {
+    -webkit-transform: translateX(35%) scale(0.1, 1);
+            transform: translateX(35%) scale(0.1, 1); }
+
+  58% {
+    -webkit-transform: translateX(50%) scale(0.1, 1);
+            transform: translateX(50%) scale(0.1, 1); }
+
+  61.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  69.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  70% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  80% {
+    -webkit-transform: translateX(20%) scale(0.25, 1);
+            transform: translateX(20%) scale(0.25, 1); }
+
+  85% {
+    -webkit-transform: translateX(35%) scale(0.05, 1);
+            transform: translateX(35%) scale(0.05, 1); }
+
+  88% {
+    -webkit-transform: translateX(35%) scale(0.1, 1);
+            transform: translateX(35%) scale(0.1, 1); }
+
+  91% {
+    -webkit-transform: translateX(50%) scale(0.1, 1);
+            transform: translateX(50%) scale(0.1, 1); }
+
+  92.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  93% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  100% {
+    -webkit-transform: translateX(-25%) scale(0.5, 1);
+            transform: translateX(-25%) scale(0.5, 1); } }
+
+@keyframes indeterminate1 {
+  0% {
+    -webkit-transform: translateX(-25%) scale(0.5, 1);
+            transform: translateX(-25%) scale(0.5, 1); }
+
+  10% {
+    -webkit-transform: translateX(25%) scale(0.5, 1);
+            transform: translateX(25%) scale(0.5, 1); }
+
+  19.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  20% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  30% {
+    -webkit-transform: translateX(37.5%) scale(0.25, 1);
+            transform: translateX(37.5%) scale(0.25, 1); }
+
+  34.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  36.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  37% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  47% {
+    -webkit-transform: translateX(20%) scale(0.25, 1);
+            transform: translateX(20%) scale(0.25, 1); }
+
+  52% {
+    -webkit-transform: translateX(35%) scale(0.05, 1);
+            transform: translateX(35%) scale(0.05, 1); }
+
+  55% {
+    -webkit-transform: translateX(35%) scale(0.1, 1);
+            transform: translateX(35%) scale(0.1, 1); }
+
+  58% {
+    -webkit-transform: translateX(50%) scale(0.1, 1);
+            transform: translateX(50%) scale(0.1, 1); }
+
+  61.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  69.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  70% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  80% {
+    -webkit-transform: translateX(20%) scale(0.25, 1);
+            transform: translateX(20%) scale(0.25, 1); }
+
+  85% {
+    -webkit-transform: translateX(35%) scale(0.05, 1);
+            transform: translateX(35%) scale(0.05, 1); }
+
+  88% {
+    -webkit-transform: translateX(35%) scale(0.1, 1);
+            transform: translateX(35%) scale(0.1, 1); }
+
+  91% {
+    -webkit-transform: translateX(50%) scale(0.1, 1);
+            transform: translateX(50%) scale(0.1, 1); }
+
+  92.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  93% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  100% {
+    -webkit-transform: translateX(-25%) scale(0.5, 1);
+            transform: translateX(-25%) scale(0.5, 1); } }
+
+@-webkit-keyframes indeterminate2 {
+  0% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  25.99% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  28% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  38% {
+    -webkit-transform: translateX(37.5%) scale(0.25, 1);
+            transform: translateX(37.5%) scale(0.25, 1); }
+
+  42.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  46.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  49.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  50% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  60% {
+    -webkit-transform: translateX(-25%) scale(0.5, 1);
+            transform: translateX(-25%) scale(0.5, 1); }
+
+  70% {
+    -webkit-transform: translateX(25%) scale(0.5, 1);
+            transform: translateX(25%) scale(0.5, 1); }
+
+  79.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); } }
+
+@keyframes indeterminate2 {
+  0% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  25.99% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  28% {
+    -webkit-transform: translateX(-37.5%) scale(0.25, 1);
+            transform: translateX(-37.5%) scale(0.25, 1); }
+
+  38% {
+    -webkit-transform: translateX(37.5%) scale(0.25, 1);
+            transform: translateX(37.5%) scale(0.25, 1); }
+
+  42.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  46.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  49.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); }
+
+  50% {
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); }
+
+  60% {
+    -webkit-transform: translateX(-25%) scale(0.5, 1);
+            transform: translateX(-25%) scale(0.5, 1); }
+
+  70% {
+    -webkit-transform: translateX(25%) scale(0.5, 1);
+            transform: translateX(25%) scale(0.5, 1); }
+
+  79.99% {
+    -webkit-transform: translateX(50%) scale(0, 1);
+            transform: translateX(50%) scale(0, 1); } }
+
+@-webkit-keyframes query {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(35%) scale(0.3, 1);
+            transform: translateX(35%) scale(0.3, 1); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); } }
+
+@keyframes query {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(35%) scale(0.3, 1);
+            transform: translateX(35%) scale(0.3, 1); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) scale(0, 1);
+            transform: translateX(-50%) scale(0, 1); } }
+
+@-webkit-keyframes buffer {
+  0% {
+    opacity: 1;
+    background-position: 0px -23px; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1;
+    background-position: -200px -23px; } }
+
+@keyframes buffer {
+  0% {
+    opacity: 1;
+    background-position: 0px -23px; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1;
+    background-position: -200px -23px; } }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-radio-button.md-default-theme .md-container .md-ripple, md-switch.md-default-theme .md-switch-thumb .md-container .md-ripple {
+  color: #43a047; }
+md-radio-button.md-default-theme .md-off, md-switch.md-default-theme .md-switch-thumb .md-off {
+  border-color: rgba(0, 0, 0, 0.54); }
+md-radio-button.md-default-theme .md-on, md-switch.md-default-theme .md-switch-thumb .md-on {
+  background-color: rgba(102, 187, 106, 0.87); }
+md-radio-button.md-default-theme.md-checked .md-off, md-switch.md-default-theme .md-switch-thumb.md-checked .md-off {
+  border-color: rgba(102, 187, 106, 0.87); }
+md-radio-button.md-default-theme.md-checked .md-ink-ripple, md-switch.md-default-theme .md-switch-thumb.md-checked .md-ink-ripple {
+  color: rgba(102, 187, 106, 0.87); }
+
+md-radio-group.md-default-theme:focus {
+  border-color: rgba(0, 0, 0, 0.73); }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-radio-button, .md-switch-thumb {
+  display: block;
+  margin: 15px;
+  white-space: nowrap;
+  cursor: pointer; }
+  md-radio-button input, .md-switch-thumb input {
+    display: none; }
+  md-radio-button .md-container, .md-switch-thumb .md-container {
+    position: relative;
+    top: 4px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer; }
+    md-radio-button .md-container .md-ripple-container, .md-switch-thumb .md-container .md-ripple-container {
+      position: absolute;
+      display: block;
+      width: 48px;
+      height: 48px;
+      left: -16px;
+      top: -16px; }
+  md-radio-button .md-off, .md-switch-thumb .md-off {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border: solid 2px;
+    border-radius: 50%;
+    -webkit-transition: border-color ease 0.28s;
+            transition: border-color ease 0.28s; }
+  md-radio-button .md-on, .md-switch-thumb .md-on {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform ease 0.28s;
+            transition: transform ease 0.28s;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  md-radio-button.md-checked .md-on, .md-switch-thumb.md-checked .md-on {
+    -webkit-transform: scale(0.55);
+            transform: scale(0.55); }
+  md-radio-button .md-label, .md-switch-thumb .md-label {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    white-space: normal;
+    pointer-events: none;
+    width: auto; }
+  md-radio-button .circle, .md-switch-thumb .circle {
+    border-radius: 50%; }
+
+md-radio-group {
+  border: 1px dotted transparent;
+  display: block;
+  outline: none; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-sidenav {
+  position: absolute;
+  width: 304px;
+  bottom: 0;
+  z-index: 60;
+  background-color: white;
+  overflow: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  md-sidenav.md-closed {
+    display: none; }
+  md-sidenav.md-closed-add, md-sidenav.md-closed-remove {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /* this is required as of 1.3x to properly
+       apply all styling in a show/hide animation */
+    -webkit-transition: 0s all;
+            transition: 0s all; }
+  md-sidenav.md-closed-add.md-closed-add-active, md-sidenav.md-closed-remove.md-closed-remove-active {
+    -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  md-sidenav.md-locked-open, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-left, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-right {
+    position: static;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+
+.md-sidenav-backdrop.md-locked-open {
+  display: none; }
+
+.md-sidenav-left, md-sidenav {
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0); }
+  .md-sidenav-left.md-closed, md-sidenav.md-closed {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0); }
+
+.md-sidenav-right {
+  left: 100%;
+  top: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0); }
+  .md-sidenav-right.md-closed {
+    -webkit-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0); }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-slider.md-default-theme .md-track {
+  background-color: rgba(0, 0, 0, 0.26); }
+md-slider.md-default-theme .md-track-fill {
+  background-color: #03a9f4; }
+md-slider.md-default-theme .md-thumb:after {
+  border-color: #03a9f4;
+  background-color: #03a9f4; }
+md-slider.md-default-theme .md-sign {
+  background-color: #03a9f4; }
+  md-slider.md-default-theme .md-sign:after {
+    border-top-color: #03a9f4; }
+md-slider.md-default-theme .md-thumb-text {
+  color: white; }
+md-slider.md-default-theme .md-focus-thumb {
+  background-color: rgba(0, 0, 0, 0.54); }
+md-slider.md-default-theme .md-focus-ring {
+  border-color: rgba(0, 0, 0, 0.12); }
+md-slider.md-default-theme .md-disabled-thumb {
+  border-color: #ffffff; }
+md-slider.md-default-theme.md-min .md-thumb:after {
+  background-color: #ffffff; }
+md-slider.md-default-theme[disabled] .md-thumb:after {
+  border-color: #bdbdbd; }
+md-slider.md-default-theme[disabled]:not(.md-min) .md-thumb:after {
+  background-color: #bdbdbd; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+@-webkit-keyframes sliderFocusThumb {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+@keyframes sliderFocusThumb {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+
+md-slider {
+  height: 48px;
+  position: relative;
+  display: block;
+  margin-left: 4px;
+  margin-right: 4px;
+  /**
+   * Track
+   */
+  /**
+   * Slider thumb
+   */
+  /* The sign that's focused in discrete mode */
+  /**
+   * The border/background that comes in when focused in non-discrete mode
+   */
+  /* Don't animate left/right while panning */ }
+  md-slider .md-track-container {
+    width: 100%;
+    position: absolute;
+    top: 23px;
+    height: 2px; }
+  md-slider .md-track {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%; }
+  md-slider .md-track-fill {
+    -webkit-transition: width 0.05s linear;
+            transition: width 0.05s linear; }
+  md-slider .md-track-ticks {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%; }
+  md-slider .md-thumb-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.1s linear;
+            transition: transform 0.1s linear; }
+  md-slider .md-thumb {
+    z-index: 1;
+    position: absolute;
+    left: -19px;
+    top: 5px;
+    width: 38px;
+    height: 38px;
+    border-radius: 38px;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transition: all 0.1s linear;
+            transition: all 0.1s linear; }
+    md-slider .md-thumb:after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+      border: 3px solid; }
+  md-slider .md-sign {
+    /* Center the children (slider-thumb-text) */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    left: -14px;
+    top: -20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 28px;
+    -webkit-transform: scale(0.4) translate3d(0, 70px, 0);
+            transform: scale(0.4) translate3d(0, 70px, 0);
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    /* The arrow pointing down under the sign */ }
+    md-slider .md-sign:after {
+      position: absolute;
+      content: '';
+      left: 0px;
+      border-radius: 16px;
+      top: 19px;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 16px solid;
+      opacity: 0;
+      -webkit-transform: translate3d(0, -8px, 0);
+              transform: translate3d(0, -8px, 0);
+      -webkit-transition: all 0.2s ease-in-out;
+              transition: all 0.2s ease-in-out; }
+    md-slider .md-sign .md-thumb-text {
+      z-index: 1;
+      font-size: 12px;
+      font-weight: bold; }
+  md-slider .md-focus-thumb {
+    position: absolute;
+    left: -24px;
+    top: 0px;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    display: none;
+    opacity: 0;
+    background-color: #C0C0C0;
+    -webkit-animation: sliderFocusThumb 0.4s linear;
+            animation: sliderFocusThumb 0.4s linear; }
+  md-slider .md-focus-ring {
+    position: absolute;
+    left: -24px;
+    top: 0px;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    border: 2px solid #D6D6D6;
+    background-color: transparent;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition: all 0.2s linear;
+            transition: all 0.2s linear; }
+  md-slider .md-disabled-thumb {
+    position: absolute;
+    left: -22px;
+    top: 2px;
+    width: 44px;
+    height: 44px;
+    border-radius: 44px;
+    -webkit-transform: scale(0.35);
+            transform: scale(0.35);
+    border: 6px solid;
+    display: none; }
+  md-slider.md-min .md-thumb:after {
+    background-color: white; }
+  md-slider.md-min .md-sign {
+    opacity: 0; }
+  md-slider:focus {
+    outline: none; }
+  md-slider.panning .md-thumb-container, md-slider.panning .md-track-fill {
+    -webkit-transition: none;
+            transition: none; }
+  md-slider:not([md-discrete]) {
+    /* Hide the sign and ticks in non-discrete mode */ }
+    md-slider:not([md-discrete]) .md-track-ticks, md-slider:not([md-discrete]) .md-sign {
+      display: none; }
+    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {
+      -webkit-transform: scale(0.6);
+              transform: scale(0.6); }
+    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-focus-thumb {
+      display: block; }
+    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring, md-slider:not([md-discrete]):not([disabled]).active .md-focus-ring {
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb, md-slider:not([md-discrete]):not([disabled]).active .md-thumb {
+      -webkit-transform: scale(0.85);
+              transform: scale(0.85); }
+  md-slider[md-discrete] {
+    /* Hide the focus thumb in discrete mode */ }
+    md-slider[md-discrete] .md-focus-thumb, md-slider[md-discrete] .md-focus-ring {
+      display: none; }
+    md-slider[md-discrete]:not([disabled]):focus .md-sign, md-slider[md-discrete]:not([disabled]):focus .md-sign:after, md-slider[md-discrete]:not([disabled]).active .md-sign, md-slider[md-discrete]:not([disabled]).active .md-sign:after {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1); }
+  md-slider[disabled] .md-track-fill {
+    display: none; }
+  md-slider[disabled] .md-sign {
+    display: none; }
+  md-slider[disabled] .md-thumb {
+    -webkit-transform: scale(0.35);
+            transform: scale(0.35); }
+  md-slider[disabled] .md-disabled-thumb {
+    display: block; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+.md-sticky-clone {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute !important;
+  -webkit-transform: translate3d(-9999px, -9999px, 0);
+          transform: translate3d(-9999px, -9999px, 0); }
+  .md-sticky-clone[sticky-state="active"] {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+    .md-sticky-clone[sticky-state="active"]:not(.md-sticky-no-effect):after {
+      -webkit-animation: subheaderStickyHoverIn 0.3s ease-out both;
+              animation: subheaderStickyHoverIn 0.3s ease-out both; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
 .md-subheader.md-default-theme {
   color: rgba(0, 0, 0, 0.54);
   background-color: #ffffff; }
@@ -19431,61 +19493,55 @@ md-progress-circular {
  * @license MIT
  * v0.6.1
  */
-md-sidenav {
-  position: absolute;
-  width: 304px;
-  bottom: 0;
-  z-index: 60;
-  background-color: white;
-  overflow: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-  md-sidenav.md-closed {
-    display: none; }
-  md-sidenav.md-closed-add, md-sidenav.md-closed-remove {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    /* this is required as of 1.3x to properly
-       apply all styling in a show/hide animation */
-    -webkit-transition: 0s all;
-            transition: 0s all; }
-  md-sidenav.md-closed-add.md-closed-add-active, md-sidenav.md-closed-remove.md-closed-remove-active {
-    -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  md-sidenav.md-locked-open, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-left, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-right {
-    position: static;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+md-switch.md-default-theme .md-switch-bar {
+  background-color: rgba(0, 0, 0, 0.54); }
+md-switch.md-default-theme .md-switch-thumb:focus .md-label {
+  border: 1px dotted black; }
 
-.md-sidenav-backdrop.md-locked-open {
-  display: none; }
-
-.md-sidenav-left, md-sidenav {
-  left: 0;
-  top: 0;
-  -webkit-transform: translate3d(0%, 0, 0);
-          transform: translate3d(0%, 0, 0); }
-  .md-sidenav-left.md-closed, md-sidenav.md-closed {
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0); }
-
-.md-sidenav-right {
-  left: 100%;
-  top: 0;
-  -webkit-transform: translate3d(-100%, 0, 0);
-          transform: translate3d(-100%, 0, 0); }
-  .md-sidenav-right.md-closed {
-    -webkit-transform: translate3d(0%, 0, 0);
-            transform: translate3d(0%, 0, 0); }
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-switch {
+  display: block;
+  position: relative;
+  height: 24px;
+  margin: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* used also in _radio-button.scss */ }
+  md-switch .md-switch-bar {
+    position: absolute;
+    left: 16px;
+    top: 12px;
+    width: 32px;
+    height: 1px;
+    pointer-events: none; }
+  md-switch .md-switch-thumb {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 0;
+    outline: none; }
+    md-switch .md-switch-thumb .md-container {
+      position: absolute;
+      -webkit-transition: -webkit-transform 0.2s linear;
+              transition: transform 0.2s linear;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); }
+    md-switch .md-switch-thumb.md-checked .md-container {
+      -webkit-transform: translate3d(48px, 0, 0);
+              transform: translate3d(48px, 0, 0); }
+    md-switch .md-switch-thumb .md-label {
+      margin-left: 72px; }
 
 /*!
  * Angular Material Design
@@ -19672,62 +19728,6 @@ md-tab {
  * @license MIT
  * v0.6.1
  */
-md-switch.md-default-theme .md-switch-bar {
-  background-color: rgba(0, 0, 0, 0.54); }
-md-switch.md-default-theme .md-switch-thumb:focus .md-label {
-  border: 1px dotted black; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-switch {
-  display: block;
-  position: relative;
-  height: 24px;
-  margin: 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* used also in _radio-button.scss */ }
-  md-switch .md-switch-bar {
-    position: absolute;
-    left: 16px;
-    top: 12px;
-    width: 32px;
-    height: 1px;
-    pointer-events: none; }
-  md-switch .md-switch-thumb {
-    position: absolute;
-    margin: 0;
-    left: 0;
-    top: 0;
-    outline: none; }
-    md-switch .md-switch-thumb .md-container {
-      position: absolute;
-      -webkit-transition: -webkit-transform 0.2s linear;
-              transition: transform 0.2s linear;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
-    md-switch .md-switch-thumb.md-checked .md-container {
-      -webkit-transform: translate3d(48px, 0, 0);
-              transform: translate3d(48px, 0, 0); }
-    md-switch .md-switch-thumb .md-label {
-      margin-left: 72px; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
 md-input-group.md-default-theme input, md-input-group.md-default-theme textarea {
   text-shadow: none; }
   md-input-group.md-default-theme input:-ms-input-placeholder, md-input-group.md-default-theme textarea:-ms-input-placeholder {
@@ -19828,6 +19828,136 @@ md-input-group, .md-input-group {
             transform-origin: left center;
     -webkit-transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1);
             transition: all 0.15s cubic-bezier(0.35, 0, 0.25, 1); }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-toast.md-default-theme {
+  background-color: #323232;
+  color: white; }
+  md-toast.md-default-theme .md-button {
+    color: white; }
+  md-toast.md-default-theme .md-action {
+    color: #40c4ff; }
+
+/*!
+ * Angular Material Design
+ * https://github.com/angular/material
+ * @license MIT
+ * v0.6.1
+ */
+md-toast {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: default;
+  max-width: 879px;
+  max-height: 40px;
+  height: 24px;
+  z-index: 80;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0) rotateZ(0deg);
+          transform: translate3d(0, 0, 0) rotateZ(0deg);
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+          transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* Transition differently when swiping */ }
+  md-toast.md-capsule {
+    border-radius: 24px; }
+  md-toast.ng-leave-active {
+    -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+            transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }
+  md-toast.md-swipeleft, md-toast.md-swiperight, md-toast.md-swipeup, md-toast.md-swipedown {
+    -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  md-toast.ng-enter {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    opacity: 0; }
+    md-toast.ng-enter.md-top {
+      -webkit-transform: translate3d(0, -100%, 0);
+              transform: translate3d(0, -100%, 0); }
+    md-toast.ng-enter.ng-enter-active {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      opacity: 1; }
+  md-toast.ng-leave.ng-leave-active {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+    md-toast.ng-leave.ng-leave-active.md-top {
+      -webkit-transform: translate3d(0, -100%, 0);
+              transform: translate3d(0, -100%, 0); }
+    md-toast.ng-leave.ng-leave-active.md-swipeleft {
+      -webkit-transform: translate3d(-100%, 0%, 0);
+              transform: translate3d(-100%, 0%, 0); }
+    md-toast.ng-leave.ng-leave-active.md-swiperight {
+      -webkit-transform: translate3d(100%, 0%, 0);
+              transform: translate3d(100%, 0%, 0); }
+  md-toast .md-action {
+    line-height: 19px;
+    padding-left: 24px;
+    cursor: pointer;
+    text-transform: uppercase;
+    float: right; }
+
+@media (max-width: 600px) {
+  md-toast {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    border-radius: 0;
+    bottom: 0; }
+    md-toast.md-top {
+      bottom: auto;
+      top: 0; }
+ }
+
+@media (min-width: 600px) {
+  md-toast {
+    min-width: 288px;
+    /* 
+     * When the toast doesn't take up the whole screen,
+     * make it rotate when the user swipes it away
+     */ }
+    md-toast.md-bottom {
+      bottom: 8px; }
+    md-toast.md-left {
+      left: 8px; }
+    md-toast.md-right {
+      right: 8px; }
+    md-toast.md-top {
+      top: 8px; }
+    md-toast.ng-leave.ng-leave-active.md-swipeleft {
+      -webkit-transform: translate3d(-100%, 25%, 0) rotateZ(-15deg);
+              transform: translate3d(-100%, 25%, 0) rotateZ(-15deg); }
+    md-toast.ng-leave.ng-leave-active.md-swiperight {
+      -webkit-transform: translate3d(100%, 25%, 0) rotateZ(15deg);
+              transform: translate3d(100%, 25%, 0) rotateZ(15deg); }
+    md-toast.ng-leave.ng-leave-active.md-top.md-swipeleft {
+      -webkit-transform: translate3d(-100%, 0, 0) rotateZ(-15deg);
+              transform: translate3d(-100%, 0, 0) rotateZ(-15deg); }
+    md-toast.ng-leave.ng-leave-active.md-top.md-swiperight {
+      -webkit-transform: translate3d(100%, 0, 0) rotateZ(15deg);
+              transform: translate3d(100%, 0, 0) rotateZ(15deg); }
+ }
 
 /*!
  * Angular Material Design
@@ -20078,133 +20208,3 @@ md-tooltip {
 
 .md-whiteframe-z5 {
   box-shadow: 0px 27px 24px 0 rgba(0, 0, 0, 0.2); }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-toast.md-default-theme {
-  background-color: #323232;
-  color: white; }
-  md-toast.md-default-theme .md-button {
-    color: white; }
-  md-toast.md-default-theme .md-action {
-    color: #40c4ff; }
-
-/*!
- * Angular Material Design
- * https://github.com/angular/material
- * @license MIT
- * v0.6.1
- */
-md-toast {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  box-sizing: border-box;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 48px;
-  padding-left: 24px;
-  padding-right: 24px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  border-radius: 2px;
-  font-size: 14px;
-  cursor: default;
-  max-width: 879px;
-  max-height: 40px;
-  height: 24px;
-  z-index: 80;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0) rotateZ(0deg);
-          transform: translate3d(0, 0, 0) rotateZ(0deg);
-  -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-          transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  /* Transition differently when swiping */ }
-  md-toast.md-capsule {
-    border-radius: 24px; }
-  md-toast.ng-leave-active {
-    -webkit-transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
-            transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }
-  md-toast.md-swipeleft, md-toast.md-swiperight, md-toast.md-swipeup, md-toast.md-swipedown {
-    -webkit-transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  md-toast.ng-enter {
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0);
-    opacity: 0; }
-    md-toast.ng-enter.md-top {
-      -webkit-transform: translate3d(0, -100%, 0);
-              transform: translate3d(0, -100%, 0); }
-    md-toast.ng-enter.ng-enter-active {
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0);
-      opacity: 1; }
-  md-toast.ng-leave.ng-leave-active {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 100%, 0);
-            transform: translate3d(0, 100%, 0); }
-    md-toast.ng-leave.ng-leave-active.md-top {
-      -webkit-transform: translate3d(0, -100%, 0);
-              transform: translate3d(0, -100%, 0); }
-    md-toast.ng-leave.ng-leave-active.md-swipeleft {
-      -webkit-transform: translate3d(-100%, 0%, 0);
-              transform: translate3d(-100%, 0%, 0); }
-    md-toast.ng-leave.ng-leave-active.md-swiperight {
-      -webkit-transform: translate3d(100%, 0%, 0);
-              transform: translate3d(100%, 0%, 0); }
-  md-toast .md-action {
-    line-height: 19px;
-    padding-left: 24px;
-    cursor: pointer;
-    text-transform: uppercase;
-    float: right; }
-
-@media (max-width: 600px) {
-  md-toast {
-    left: 0;
-    right: 0;
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    border-radius: 0;
-    bottom: 0; }
-    md-toast.md-top {
-      bottom: auto;
-      top: 0; }
- }
-
-@media (min-width: 600px) {
-  md-toast {
-    min-width: 288px;
-    /* 
-     * When the toast doesn't take up the whole screen,
-     * make it rotate when the user swipes it away
-     */ }
-    md-toast.md-bottom {
-      bottom: 8px; }
-    md-toast.md-left {
-      left: 8px; }
-    md-toast.md-right {
-      right: 8px; }
-    md-toast.md-top {
-      top: 8px; }
-    md-toast.ng-leave.ng-leave-active.md-swipeleft {
-      -webkit-transform: translate3d(-100%, 25%, 0) rotateZ(-15deg);
-              transform: translate3d(-100%, 25%, 0) rotateZ(-15deg); }
-    md-toast.ng-leave.ng-leave-active.md-swiperight {
-      -webkit-transform: translate3d(100%, 25%, 0) rotateZ(15deg);
-              transform: translate3d(100%, 25%, 0) rotateZ(15deg); }
-    md-toast.ng-leave.ng-leave-active.md-top.md-swipeleft {
-      -webkit-transform: translate3d(-100%, 0, 0) rotateZ(-15deg);
-              transform: translate3d(-100%, 0, 0) rotateZ(-15deg); }
-    md-toast.ng-leave.ng-leave-active.md-top.md-swiperight {
-      -webkit-transform: translate3d(100%, 0, 0) rotateZ(15deg);
-              transform: translate3d(100%, 0, 0) rotateZ(15deg); }
- }

@@ -1,4 +1,4 @@
-angular.module 'citrix-test', [ 'ngRoute','citrix-test-main','templates' ]
+angular.module 'citrix-test', [ 'ngRoute','main','templates' ]
 
   .config ($routeProvider) ->
 
