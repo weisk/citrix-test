@@ -19,6 +19,11 @@
     "angular-route": "~1.3.x",
     "angular-material": "~0.6.1",
     "jquery": "~2.1.3",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "ionicons": "~2.0.0",
+    "jquery-dropdown": "~1.0.5"
+  },
+  "resolutions": {
+    "jquery": "~2.1.3"
   }
 }

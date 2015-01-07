@@ -7,6 +7,7 @@ var concat    = require('gulp-concat');
 var tplCache  = require('gulp-angular-templatecache');
 var jade      = require('gulp-jade');
 var less      = require('gulp-less');
+var flatten   = require('gulp-flatten');
 
 gulp.task('assets', function() {
   gulp.src([
@@ -79,18 +80,23 @@ gulp.task('libJS', function() {
     './bower_components/lodash/dist/lodash.js',
     './bower_components/jquery/dist/jquery.js',
     './bower_components/angular/angular.js',
-    './bower_components/angular-route/angular-route.js'
+    './bower_components/angular-route/angular-route.js',
+    './bower_components/jquery-dropdown/jquery.dropdown.js',
     ]).pipe(concat('lib.js'))
       .pipe(gulp.dest('./build'));
 });
 
-gulp.task('libCSS',
-  function() {
+gulp.task('libCSS', function() {
   // concatenate vendor css into build/lib.css
   gulp.src(['!./bower_components/**/*.min.css',
       './bower_components/**/*.css'])
       .pipe(concat('lib.css'))
       .pipe(gulp.dest('./build'));
+
+  // source any possible fonts
+  gulp.src('./bower_components/**/fonts/*')
+  .pipe(flatten())
+  .pipe(gulp.dest('./build/fonts'));
 });
 
 gulp.task('index', function() {
@@ -121,7 +127,7 @@ gulp.task('watch',function() {
 
 gulp.task('connect', connect.server({
   root: ['build'],
-  port: 9000,
+  port: 9001,
   livereload: true
 }));
 

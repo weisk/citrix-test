@@ -1,8 +1,27 @@
-h3 Citrix Podio
-input(type="text" ng-model="filter")
-ul
-  li.lol(ng-repeat="org in data | filter:canViewOrg")
-    {{org.name}}
-    ul
-      li(ng-repeat="space in org.spaces | filter:canViewSpace")
-        {{space.name}}
+header(layout="row" layout-align="start center")
+    img.brand(src="assets/podio.png")
+    ul.menu(layout="row")
+        li Home
+        li(data-dropdown="#switcher") Go to space
+            i#state.ion-chevron-up
+        li App Store
+
+div#switcher.dropdown
+    div.dropdown-panel
+        div.search(flex layout="row" layout-align="start center")
+            i.ion-ios-search
+            input(search-focus flex type="text" ng-model="filter" autofocus)
+        ul.orgs
+          li.org(ng-repeat="org in data" ng-show="canViewOrg(org)" layout="row")
+            img.thumb(ng-src="{{ org.image.thumbnail_link }}")
+            ul.spaces
+              div.title {{ org.name }}
+              li.space(ng-repeat="space in org.spaces" ng-show="canViewSpace(org)(space)") {{space.name}}
+
+
+script.
+    $(function(){
+        setTimeout(function(){
+            $('[data-dropdown]').dropdown('show')
+        }, 300);
+    })
