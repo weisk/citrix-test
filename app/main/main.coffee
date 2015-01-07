@@ -6,16 +6,6 @@ angular.module 'main',['ngRoute', 'directives']
       templateUrl: 'main/main.html'
       controller: 'MainCtrl'
 
-.directive 'repeatWatch', ->
-  priority: 1001
-  link: (scope, el, attrs) ->
-    console.log el
-    scope.$watch ->
-      scope
-    , ->
-      if scope.$last
-        scope.$eval attrs.repeatWatch
-
 .controller 'MainCtrl', ($scope, $http) ->
   $http.get 'assets/spaces.json'
   .success (data) ->
