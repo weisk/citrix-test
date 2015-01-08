@@ -34,3 +34,13 @@ angular.module 'main',['ngRoute', 'directives']
     items.each (k,v) ->
       str = $(v).text().replace matches, ($1) -> "<span class=\"highlight\">#{$1}</span>"
       $(v).html str
+
+  $scope.selectOrg = (org) ->
+    $scope.$broadcast 'dropdown:hide'
+    $scope.selectedOrg = org
+    $scope.selectedSpace = null
+
+  $scope.selectSpace = (space) ->
+    $scope.$broadcast 'dropdown:hide'
+    $scope.selectedSpace = space
+    $scope.selectedOrg = null

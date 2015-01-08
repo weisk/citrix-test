@@ -16,6 +16,97 @@ angular.module('directives', []).directive('searchFocus', function() {
       });
     }
   };
+}).directive('dropdownToggle', function() {
+  return {
+    restrict: 'A',
+    compile: function(tEl, tAttrs, tFn) {
+      var state;
+      state = tEl.find('#state');
+      return function(scope, el, attrs) {
+        var dropdown;
+        dropdown = $(attrs.dropdownToggle);
+        scope.$on('dropdown:hide', function() {
+          return dropdown.dropdown('hide');
+        });
+        dropdown.on('show', function() {
+          state.removeClass('ion-chevron-down').addClass('ion-chevron-up');
+          return state.parent().addClass('toggled');
+        });
+        return dropdown.on('hide', function() {
+          state.removeClass('ion-chevron-up').addClass('ion-chevron-down');
+          return state.parent().removeClass('toggled');
+        });
+      };
+    }
+  };
+}).directive('dropdownKeyListen', function() {
+  return {
+    restrict: 'A',
+    compile: function(tEl, tAttrs, tFn) {
+      var index, min;
+      index = min = 0;
+      return function(scope, el, attrs) {
+        var calcOffset, getElements, moveFocus;
+        getElements = function(visible) {
+          var elements;
+          elements = el.find('.spaces > *');
+          if (visible) {
+            elements = elements.not('.ng-hide');
+          }
+          return elements;
+        };
+        moveFocus = function(i) {
+          getElements().removeClass('focus');
+          getElements(true).eq(i).addClass('focus');
+          return calcOffset();
+        };
+        calcOffset = function() {
+          var currentTop, elementTop, highlighted, maxTop;
+          highlighted = $('.spaces .focus');
+          maxTop = $('.orgs').offset().top + $('.orgs').height();
+          currentTop = $('.orgs').scrollTop();
+          elementTop = highlighted.offset().top + highlighted.height();
+          if (elementTop > maxTop) {
+            return $('.orgs').scrollTop(currentTop + elementTop - maxTop);
+          } else if (currentTop > elementTop) {
+            return $('.orgs').scrollTop(elementTop - highlighted.height());
+          }
+        };
+        window.onresize = function() {
+          return calcOffset();
+        };
+        el.on('show', function() {
+          el.find('input').focus();
+          return moveFocus(index);
+        });
+        return el.on('keydown', function(evt) {
+          var childScope, max, target;
+          max = getElements().length - 1;
+          switch (evt.keyCode) {
+            case 38:
+              if (index > min) {
+                return moveFocus(--index);
+              }
+              break;
+            case 40:
+              if (index < max) {
+                return moveFocus(++index);
+              }
+              break;
+            case 13:
+              target = getElements(true).eq(index);
+              childScope = target.scope();
+              return scope.$apply(function() {
+                return childScope.$eval(target.attr('ng-enter'));
+              });
+            default:
+              index = 0;
+              return moveFocus(index);
+          }
+        });
+      };
+    }
+  };
 });
 
 'common service goes here';
@@ -26,20 +117,6 @@ angular.module('main', ['ngRoute', 'directives']).config(function($routeProvider
     templateUrl: 'main/main.html',
     controller: 'MainCtrl'
   });
-}).directive('repeatWatch', function() {
-  return {
-    priority: 1001,
-    link: function(scope, el, attrs) {
-      console.log(el);
-      return scope.$watch(function() {
-        return scope;
-      }, function() {
-        if (scope.$last) {
-          return scope.$eval(attrs.repeatWatch);
-        }
-      });
-    }
-  };
 }).controller('MainCtrl', function($scope, $http) {
   $http.get('assets/spaces.json').success(function(data) {
     return $scope.data = data;
@@ -57,7 +134,7 @@ angular.module('main', ['ngRoute', 'directives']).config(function($routeProvider
       return !$scope.filter || ((_ref = org.name) != null ? typeof _ref.toLowerCase === "function" ? _ref.toLowerCase().indexOf($scope.filter.toLowerCase()) : void 0 : void 0) > -1 || ((_ref1 = space.name) != null ? typeof _ref1.toLowerCase === "function" ? _ref1.toLowerCase().indexOf($scope.filter.toLowerCase()) : void 0 : void 0) > -1;
     };
   };
-  return $scope.$watch('filter', function(value) {
+  $scope.$watch('filter', function(value) {
     var items, matches;
     $('.highlight').contents().unwrap();
     if (!value) {
@@ -75,4 +152,14 @@ angular.module('main', ['ngRoute', 'directives']).config(function($routeProvider
       return $(v).html(str);
     });
   });
+  $scope.selectOrg = function(org) {
+    $scope.$broadcast('dropdown:hide');
+    $scope.selectedOrg = org;
+    return $scope.selectedSpace = null;
+  };
+  return $scope.selectSpace = function(space) {
+    $scope.$broadcast('dropdown:hide');
+    $scope.selectedSpace = space;
+    return $scope.selectedOrg = null;
+  };
 });

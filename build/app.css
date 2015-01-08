@@ -5,6 +5,11 @@ ul {
   list-style: none;
 }
 
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 .highlight {
   background-color: yellow;
   font-style: italic;
@@ -16,12 +21,20 @@ header {
 header .brand {
   height: 25px;
 }
+header .menu {
+  margin: 0;
+  padding: 5px 0 0 40px;
+}
 header .menu > li {
-  padding: 0 15px;
+  padding: 15px;
+  padding-top: 10px;
   color: white;
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 header #state {
   line-height: 1px;
@@ -30,11 +43,26 @@ header #state {
   color: white;
   font-size: 12px;
 }
+header #state[class$="up"] {
+  color: black;
+}
+header .toggled {
+  margin-top: -1px;
+  margin-right: -2px;
+  color: black !important;
+  background-color: white;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-bottom-width: 0px;
+  border-radius: 6px 6px 0 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
 .dropdown .dropdown-panel {
-  margin-top: 16px;
+  padding-bottom: 0px;
   width: 300px;
+  max-height: 80vh;
   border-top-width: 0px;
   border-radius: 0 0 6px 6px;
+  box-shadow: 0 12px 10px rgba(0, 0, 0, 0.2);
 }
 .dropdown .dropdown-panel .search {
   margin-bottom: 10px;
@@ -56,10 +84,13 @@ header #state {
 .dropdown .dropdown-panel li {
   color: #666666;
   font-weight: 300;
+  cursor: pointer;
 }
 .dropdown .dropdown-panel .orgs {
   margin: 0 -10px;
   padding: 0;
+  overflow-y: scroll;
+  max-height: 65vh;
 }
 .dropdown .dropdown-panel .org {
   border-top: 1px solid #eeeeee;
@@ -71,7 +102,12 @@ header #state {
 }
 .dropdown .dropdown-panel .spaces {
   padding: 0px;
+  padding-bottom: 5px;
   border-left: 1px solid #eeeeee;
+}
+.dropdown .dropdown-panel .spaces .focus,
+.dropdown .dropdown-panel .spaces :active {
+  background-color: rgba(102, 175, 233, 0.2);
 }
 .dropdown .dropdown-panel .title {
   line-height: 50px;
@@ -80,5 +116,33 @@ header #state {
   font-weight: 700;
 }
 .dropdown .dropdown-panel .space {
-  padding: 0px 0 5px 15px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 28px;
+}
+main {
+  margin: 100px;
+  margin-top: 20px;
+}
+main .logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+main .content {
+  margin-right: 40px;
+}
+main table {
+  border: 1px solid #999999;
+  border-collapse: collapse;
+}
+main table thead tr {
+  border-color: #666666;
+}
+main table tr {
+  border-bottom: 1px solid #999999;
+}
+main table td,
+main table th {
+  padding: 10px;
 }

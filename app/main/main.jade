@@ -2,11 +2,11 @@ header(layout="row" layout-align="start center")
     img.brand(src="assets/podio.png")
     ul.menu(layout="row")
         li Home
-        li(data-dropdown="#switcher") Go to space
-            i#state.ion-chevron-up
+        li(dropdown-toggle="#switcher" data-dropdown="#switcher") Go to space
+            i#state.ion-chevron-down
         li App Store
 
-div#switcher.dropdown
+div#switcher.dropdown(dropdown-key-listen)
     div.dropdown-panel
         div.search(flex layout="row" layout-align="start center")
             i.ion-ios-search
@@ -14,14 +14,41 @@ div#switcher.dropdown
         ul.orgs
           li.org(ng-repeat="org in data" ng-show="canViewOrg(org)" layout="row")
             img.thumb(ng-src="{{ org.image.thumbnail_link }}")
-            ul.spaces
-              div.title {{ org.name }}
-              li.space(ng-repeat="space in org.spaces" ng-show="canViewSpace(org)(space)") {{space.name}}
+            ul.spaces(flex)
+              div.title(ng-show="canViewOrg(org)" ng-enter="selectOrg(org)" ng-click="selectOrg(org)") {{ org.name }}
+              li.space(ng-repeat="space in org.spaces" ng-show="canViewSpace(org)(space)" ng-enter="selectSpace(space)" ng-click="selectSpace(space)") {{space.name}}
 
+main
+    div(ng-if="selectedOrg" layout="row")
+        div.content
+            div(layout="row" layout-align="start center")
+                img.logo(ng-src="{{ selectedOrg.image.thumbnail_link }}")
+                h3 {{ selectedOrg.name + ' (' + selectedOrg.id + ')'}}
+            h4
+                a(ng-href="{{ selectedOrg.url }}") {{ selectedOrg.url }}
 
-script.
-    $(function(){
-        setTimeout(function(){
-            $('[data-dropdown]').dropdown('show')
-        }, 300);
-    })
+        div(flex)
+            h3 Spaces:
+            table
+                thead
+                    th id
+                    th name
+                    th url
+                    th rank
+                tbody
+                    tr(ng-repeat="space in selectedOrg.spaces")
+                        td {{ space.id }}
+                        td {{ space.name }}
+                        td
+                            a(ng-href="{{ space.url }}") {{ space.url }}
+                        td {{ space.rank }}
+
+    div(ng-if="selectedSpace")
+        h3 {{ selectedSpace.name + ' (' + selectedSpace.id + ')'}}
+        h4
+            a(ng-href="{{ selectedSpace.url }}") {{ selectedSpace.url }}
+
+        h4 Rights:
+            ul
+                li(ng-repeat="right in selectedSpace.rights") - {{ right }}
+
