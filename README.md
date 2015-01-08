@@ -3,6 +3,8 @@ Citrix Puzzle
 
 Podio SpaceSwitcher Component
 
+See a live demo on [http://citrix.syngular.es](http://citrix.syngular.es)
+
 ### Implementation details
 
 Following is the planning I did to implement all of this, split by the different tasks.
